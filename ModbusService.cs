@@ -1,23 +1,24 @@
 using System;
+using System.IO.Ports;
 using EasyModbus;
 
 class ModbusService : IDisposable
 {
 
   static ModbusClient? modbusClient;
-  public ModbusService()
+  public ModbusService(string serialPort, int baudrate, string parity, string stopbits, int unitIden)
   {
-    modbusClient = new ModbusClient("COM20");
+    modbusClient = new ModbusClient(serialPort);
 
-    modbusClient.Baudrate = 9600;
-    modbusClient.Parity = System.IO.Ports.Parity.None;
-    modbusClient.StopBits = System.IO.Ports.StopBits.One;
-    modbusClient.UnitIdentifier = 1;
+    modbusClient.Baudrate = baudrate;
+    modbusClient.Parity = SetParity(parity);
 
+    modbusClient.StopBits = SetStopbits(stopbits);
+    modbusClient.UnitIdentifier = (byte)unitIden;
     try
     {
       modbusClient.Connect();
-      Console.WriteLine(modbusClient.Connected);
+      Console.WriteLine($"Connect modbus serial port {serialPort} successfully.");
     }
     catch (EasyModbus.Exceptions.ModbusException mex)
     {
@@ -63,6 +64,45 @@ class ModbusService : IDisposable
       {
         Console.WriteLine($"Register address {startAddress+i} :---> {regValues[i]}");
       }
+    }
+  }
+
+  static private System.IO.Ports.Parity SetParity(string parity)
+  {
+    if (modbusClient == null) return System.IO.Ports.Parity.None;
+
+    if (parity == "none")
+    {
+      return System.IO.Ports.Parity.None;
+    }
+    else if (parity == "odd")
+    {
+      return System.IO.Ports.Parity.Odd;
+    }
+    else if (parity == "even")
+    {
+      return System.IO.Ports.Parity.Even;
+    }
+    else
+    {
+      return System.IO.Ports.Parity.None;
+    }
+  }
+
+  static private System.IO.Ports.StopBits SetStopbits(string stopbits)
+  {
+    if (modbusClient == null) return System.IO.Ports.StopBits.None;
+    if (stopbits == "one")
+    {
+      return System.IO.Ports.StopBits.One;
+    }
+    else if (stopbits == "two")
+    {
+      return System.IO.Ports.StopBits.Two;
+    }
+    else
+    {
+      return System.IO.Ports.StopBits.None;
     }
   }
 

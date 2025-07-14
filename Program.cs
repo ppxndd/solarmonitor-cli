@@ -35,7 +35,13 @@ class Program
           GetAvailablePort();
           break;
         case "modbus-connect":
-          modbusSvc = new ModbusService();
+          if (configSvc == null) return;
+          string serialPort = configSvc.serialPort;
+          int baudrate = configSvc.baudrate;
+          string parity = configSvc.parity;
+          string stopbits = configSvc.stopbits;
+          int unitIden = configSvc.unitIden;
+          modbusSvc = new ModbusService(serialPort, baudrate, parity, stopbits, unitIden);
           break;
         case "modbus-disconnect":
           modbusSvc?.Dispose();

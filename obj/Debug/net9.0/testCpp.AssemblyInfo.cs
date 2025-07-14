@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("testCpp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3c9d23120b20a8adbb5d767e5449641c3be82177")]
 [assembly: System.Reflection.AssemblyProductAttribute("testCpp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("testCpp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
