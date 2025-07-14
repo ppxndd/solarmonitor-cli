@@ -1,0 +1,1 @@
+serialPort=COM15,baudrate=9600,parity=none,stopbits=one,unitIden=1
