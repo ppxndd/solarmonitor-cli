@@ -52,6 +52,12 @@ class Program
           int quantity = Int32.Parse(arguments[1]);
           modbusSvc?.ReadReg(startAddress, quantity);
           break;
+        case "modbus-read-meter":
+          if (modbusSvc == null) return;
+          if (arguments.Length < 1) return;
+          int lengthReg = Int32.Parse(arguments[0]);
+          modbusSvc.GetValueFromMeter(lengthReg);
+          break;
         case "config-init":
           configSvc?.InitConfig();
           break;

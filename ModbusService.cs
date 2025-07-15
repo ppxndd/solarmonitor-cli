@@ -106,6 +106,29 @@ class ModbusService : IDisposable
     }
   }
 
+  public void GetValueFromMeter(int lengthReg)
+  {
+    if (modbusClient == null) return;
+    int[] rawDataFromModbus = modbusClient.ReadInputRegisters(0, lengthReg);
+    for (int i = 0; i < rawDataFromModbus.Length / 2; i++)
+    {
+      int decHighBit = rawDataFromModbus[2 * i];
+      int decLowBit = rawDataFromModbus[(2 * i) + 1];
+
+      string hexHighBit = decHighBit.ToString("X");
+      string hexLowBit = decLowBit.ToString("X");
+
+      string fullRegisterBit = hexHighBit + hexLowBit;
+
+      uint decValue = uint.Parse(fullRegisterBit, System.Globalization.NumberStyles.AllowHexSpecifier);
+
+      byte[] floatVals = BitConverter.GetBytes(decValue);
+      float f = BitConverter.ToSingle(floatVals, 0);
+
+      Console.WriteLine($"\n-----* Meter Value *-----\nHigh : {hexHighBit}\nLow : {hexLowBit}\nDecimal value : {f}\n");
+    }
+  }
+
   public void Dispose()
   {
     modbusClient?.Disconnect();
