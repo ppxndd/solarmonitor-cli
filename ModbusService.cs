@@ -115,17 +115,22 @@ class ModbusService : IDisposable
       int decHighBit = rawDataFromModbus[2 * i];
       int decLowBit = rawDataFromModbus[(2 * i) + 1];
 
-      string hexHighBit = decHighBit.ToString("X");
-      string hexLowBit = decLowBit.ToString("X");
+      ushort highUShort = (ushort)(decHighBit & 0xFFFF);
+      ushort lowUShort = (ushort)(decLowBit & 0xFFFF);
 
-      string fullRegisterBit = hexHighBit + hexLowBit;
+      // Pack as big-endian (most meters use big-endian)
+      byte[] bytes = new byte[4];
+      bytes[0] = (byte)(highUShort >> 8);    // high byte of high word
+      bytes[1] = (byte)(highUShort & 0xFF);  // low byte of high word
+      bytes[2] = (byte)(lowUShort >> 8);     // high byte of low word
+      bytes[3] = (byte)(lowUShort & 0xFF);   // low byte of low word
 
-      uint decValue = uint.Parse(fullRegisterBit, System.Globalization.NumberStyles.AllowHexSpecifier);
+      // If your device uses little-endian, reverse the byte array
+      // Array.Reverse(bytes);
 
-      byte[] floatVals = BitConverter.GetBytes(decValue);
-      float f = BitConverter.ToSingle(floatVals, 0);
+      float value = BitConverter.ToSingle(bytes, 0);
 
-      Console.WriteLine($"\n-----* Meter Value *-----\nHigh : {hexHighBit}\nLow : {hexLowBit}\nDecimal value : {f}\n");
+      Console.WriteLine($"Float[{i + 1}] = {value}  (Raw: {decHighBit}, {decLowBit})");
     }
   }
 
