@@ -112,25 +112,56 @@ class ModbusService : IDisposable
     int[] rawDataFromModbus = modbusClient.ReadInputRegisters(0, lengthReg);
     for (int i = 0; i < rawDataFromModbus.Length / 2; i++)
     {
-      int decHighBit = rawDataFromModbus[2 * i];
-      int decLowBit = rawDataFromModbus[(2 * i) + 1];
+      // int decHighBit = rawDataFromModbus[2 * i];
+      // int decLowBit = rawDataFromModbus[(2 * i) + 1];
 
-      ushort highUShort = (ushort)(decHighBit & 0xFFFF);
-      ushort lowUShort = (ushort)(decLowBit & 0xFFFF);
+      // string hexHighBit = decHighBit.ToString("X");
+      // string hexLowBit = decLowBit.ToString("X");
 
-      // Pack as big-endian (most meters use big-endian)
-      byte[] bytes = new byte[4];
-      bytes[0] = (byte)(highUShort >> 8);    // high byte of high word
-      bytes[1] = (byte)(highUShort & 0xFF);  // low byte of high word
-      bytes[2] = (byte)(lowUShort >> 8);     // high byte of low word
-      bytes[3] = (byte)(lowUShort & 0xFF);   // low byte of low word
 
-      // If your device uses little-endian, reverse the byte array
-      // Array.Reverse(bytes);
 
-      float value = BitConverter.ToSingle(bytes, 0);
+      // string fullRegisterBit = hexHighBit + hexLowBit;
 
-      Console.WriteLine($"Float[{i + 1}] = {value}  (Raw: {decHighBit}, {decLowBit})");
+      // uint decValue = uint.Parse(fullRegisterBit, System.Globalization.NumberStyles.AllowHexSpecifier);
+
+      // byte[] floatVals = BitConverter.GetBytes(decValue);
+      // float f = BitConverter.ToSingle(floatVals, 0);
+
+      ushort reg1 = (ushort)rawDataFromModbus[2 * i]; // high word?
+      ushort reg2 = (ushort)rawDataFromModbus[(2 * i) + 1]; // low word?
+      byte[] abcd = {
+          (byte)(reg1 >> 8), (byte)(reg1 & 0xFF),
+          (byte)(reg2 >> 8), (byte)(reg2 & 0xFF)
+      };
+
+      byte[] cdab = {
+          (byte)(reg2 >> 8), (byte)(reg2 & 0xFF),
+          (byte)(reg1 >> 8), (byte)(reg1 & 0xFF)
+      };
+
+      byte[] badc = {
+          (byte)(reg1 & 0xFF), (byte)(reg1 >> 8),
+          (byte)(reg2 & 0xFF), (byte)(reg2 >> 8)
+      };
+
+      byte[] dcba = {
+          (byte)(reg2 & 0xFF), (byte)(reg2 >> 8),
+          (byte)(reg1 & 0xFF), (byte)(reg1 >> 8)
+      };
+
+      float f_abcd = BitConverter.ToSingle(abcd, 0);
+      float f_cdab = BitConverter.ToSingle(cdab, 0);
+      float f_badc = BitConverter.ToSingle(badc, 0);
+      float f_dcba = BitConverter.ToSingle(dcba, 0);
+
+      Console.WriteLine($"[{i + 1}] Raw: {reg1}, {reg2}");
+      Console.WriteLine($"  ABCD : {f_abcd}");
+      Console.WriteLine($"  CDAB : {f_cdab}");
+      Console.WriteLine($"  BADC : {f_badc}");
+      Console.WriteLine($"  DCBA : {f_dcba}");
+      Console.WriteLine();
+
+      // Console.WriteLine($"\n-----* Meter Value *-----\nHigh : {hexHighBit}\nLow : {hexLowBit}\nDecimal value : {f}\n");
     }
   }
 
