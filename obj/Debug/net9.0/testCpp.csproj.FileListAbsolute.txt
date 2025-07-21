@@ -39,3 +39,6 @@ C:\Users\Admin\Desktop\testCpp\bin\Debug\net9.0\runtimes\win\lib\net9.0\System.I
 C:\Users\Admin\Desktop\testCpp\bin\Debug\net9.0\EasyModbus.dll
 C:\Users\Admin\Desktop\testCpp\bin\Debug\net9.0\NModbus4.dll
 C:\Users\Admin\Desktop\testCpp\obj\Debug\net9.0\testCpp.sourcelink.json
+C:\Users\Admin\Desktop\testCpp\bin\Debug\net9.0\Serilog.dll
+C:\Users\Admin\Desktop\testCpp\bin\Debug\net9.0\Serilog.Sinks.Console.dll
+C:\Users\Admin\Desktop\testCpp\bin\Debug\net9.0\Serilog.Sinks.File.dll

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "xsaQzc5ddfE=",
+  "dgSpecHash": "w0Blt/0I/LA=",
   "success": true,
   "projectFilePath": "C:\\Users\\Admin\\Desktop\\testCpp\\testCpp.csproj",
   "expectedPackageFiles": [
@@ -26,6 +26,9 @@
     "C:\\Users\\Admin\\.nuget\\packages\\runtime.native.system.io.ports\\9.0.7\\runtime.native.system.io.ports.9.0.7.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\runtime.osx-arm64.runtime.native.system.io.ports\\9.0.7\\runtime.osx-arm64.runtime.native.system.io.ports.9.0.7.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\runtime.osx-x64.runtime.native.system.io.ports\\9.0.7\\runtime.osx-x64.runtime.native.system.io.ports.9.0.7.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\serilog\\4.3.0\\serilog.4.3.0.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\serilog.sinks.console\\6.0.0\\serilog.sinks.console.6.0.0.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\serilog.sinks.file\\7.0.0\\serilog.sinks.file.7.0.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\system.io.ports\\9.0.7\\system.io.ports.9.0.7.nupkg.sha512"
   ],
   "logs": [

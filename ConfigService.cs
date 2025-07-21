@@ -1,22 +1,39 @@
 using System;
 using System.IO;
-using System.IO.Ports;
 
 class ConfigService : IDisposable
 {
-
   const string path = "config.txt";
-  public string serialPort;
-  public int baudrate;
-  public string parity;
-  public string stopbits;
-  public int unitIden;
+  private string serialPort = "COM1";
+  private int baudrate = 9600;
+  private string parity = "none";
+  private string stopbits = "one";
+  private int unitIden = 1;
+  public string SerialPort
+  {
+    get { return serialPort; }
+  }
+  public int Baudrate
+  {
+    get { return baudrate; }
+  }
+  public string Parity
+  {
+    get { return parity; }
+  }
+  public string StopBits
+  {
+    get { return stopbits; }
+  }
+  public int UnitIden
+  {
+    get { return unitIden; }
+  }
 
   public ConfigService()
   {
     this.InitConfig();
   }
-
 
   public void Dispose()
   {
@@ -25,44 +42,57 @@ class ConfigService : IDisposable
 
   public void InitConfig()
   {
-    string[] data = File.ReadAllText(path).Split(',');
-    for (int i = 0; i < data.Length; i++)
+    try
     {
-      string[] config = data[i].Split('=');
-      string configName = config[0];
-      string configValue = config[1];
-      if (configName == "serialPort")
+      if (!File.Exists(path))
       {
-        this.serialPort = configValue;
+        Console.WriteLine($"Error: config file not found: {path}");
+        return;
       }
-      if (configName == "baudrate")
+
+      string[] pairs = File.ReadAllText(path).Split(',');
+      foreach (string pair in pairs)
       {
-        this.baudrate = Int32.Parse(configValue);
+        string[] config = pair.Split('=');
+        if (config.Length != 2) continue;
+
+        string name = config[0].Trim();
+        string value = config[1].Trim();
+
+        switch (name)
+        {
+          case "serialPort":
+            serialPort = value;
+            break;
+          case "baudrate":
+            int.TryParse(value, out baudrate);
+            break;
+          case "parity":
+            parity = value.ToLower();
+            break;
+          case "stopbits":
+            stopbits = value.ToLower();
+            break;
+          case "unitIden":
+            int.TryParse(value, out unitIden);
+            break;
+        }
       }
-      if (configName == "parity")
-      {
-        this.parity = configValue;
-      }
-      if (configName == "stopbits")
-      {
-        this.stopbits = configValue;
-      }
-      if (configName == "unitIden")
-      {
-        this.unitIden = Int32.Parse(configValue);
-      }
+      Console.WriteLine("Read config successfully.");
     }
-
-    Console.WriteLine("Read config from text file successfully.\n");
+    catch (Exception ex)
+    {
+      Console.WriteLine("Error: can't read config...");
+    }
   }
 
-  public void DisplayConfig()
-  {
-    Console.WriteLine("\n*---- Config ----*");
-    Console.WriteLine($"Serial port : {serialPort}");
-    Console.WriteLine($"Baudrate : {baudrate}");
-    Console.WriteLine($"Parity : {parity}");
-    Console.WriteLine($"Stopbits : {stopbits}");
-    Console.WriteLine($"UnitIdentifier : {unitIden}\n\n");
-  }
+    public void DisplayConfig()
+    {
+        Console.WriteLine("\n*---- Config ----*");
+        Console.WriteLine($"Serial port   : {serialPort}");
+        Console.WriteLine($"Baudrate      : {baudrate}");
+        Console.WriteLine($"Parity        : {parity}");
+        Console.WriteLine($"Stopbits      : {stopbits}");
+        Console.WriteLine($"Unit Identifier: {unitIden}\n");
+    }
 }

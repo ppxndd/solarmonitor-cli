@@ -1,1 +1,1 @@
-serialPort=COM5,baudrate=9600,parity=none,stopbits=one,unitIden=1
+serialPort=COM6,baudrate=9600,parity=none,stopbits=one,unitIden=1
