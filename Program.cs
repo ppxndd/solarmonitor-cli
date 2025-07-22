@@ -10,7 +10,7 @@ class Program
   static ModbusService? modbusSvc;
   static ConfigService? configSvc;
   static LoggingService? logSvc;
-  static Meter[] meters = new Meter[1];
+  static Meter[] meters = new Meter[]{};
 
   static void Main()
   {
@@ -59,6 +59,9 @@ class Program
         case "modbus-test":
           modbusSvc?.TestReadValue();
           break;
+        case "modbus-slave":
+          modbusSvc?.GetAvailableSlave();
+          break;
         case "config-init":
           configSvc?.InitConfig();
           break;
@@ -74,17 +77,19 @@ class Program
             byte slaveId;
             byte.TryParse(arguments[1], out slaveId);
             Meter meter = new Meter(meterName, slaveId, modbusSvc);
-            meters[0] = meter;
+            meters = meters.Concat([meter]).ToArray();
           }
           break;
         case "meter-read":
-          if (arguments.Length < 2) Console.WriteLine("meter-read {quantity value}");
+          if (arguments.Length < 2) Console.WriteLine("meter-read {meter id} {quantity value}");
           else if (modbusSvc == null) Console.WriteLine("Please connect modbus");
           else
           {
-            Meter meter = meters[0];
+            int slaveIdMeter;
             int quantity;
-            int.TryParse(arguments[0], out quantity);
+            int.TryParse(arguments[0], out slaveIdMeter);
+            int.TryParse(arguments[1], out quantity);
+            Meter meter = meters[slaveIdMeter];
             meter.ReadValueFromMeter(quantity);
           }
           break;
@@ -92,9 +97,17 @@ class Program
           if (meters.Length < 1) Console.WriteLine("No meter in this system.");
           else
           {
+            Console.WriteLine("\n-----* Meters detail *-----");
             foreach (Meter meter in meters)
             {
-              Console.WriteLine($"Meter name {meter.Name}");
+              try
+              {
+                Console.WriteLine($"Slave : {meter.SlaveId} Name : {meter.Name}");
+              }
+              catch
+              {
+                Console.WriteLine("Error");
+              }
             }
           }
           break;

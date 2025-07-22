@@ -112,6 +112,28 @@ class ModbusService : IDisposable
     }
   }
 
+  public void GetAvailableSlave()
+  {
+    Console.WriteLine("\nScanning Modbus slaves on...");
+
+    for (int i = 1; i < 247; i++)
+    {
+      try
+      {
+        this.modbusClient.UnitIdentifier = (byte)i;
+        int[] values = this.modbusClient.ReadInputRegisters(0, 1);
+        Console.WriteLine($"Found slave id {i}");
+      }
+      catch
+      {
+        Console.WriteLine($"Not found slave id {i}");
+      }
+    }
+
+    Console.WriteLine("Scan finished...");
+
+  }
+
   public void Dispose()
   {
     modbusClient?.Disconnect();

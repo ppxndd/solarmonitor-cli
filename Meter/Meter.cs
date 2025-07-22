@@ -11,6 +11,10 @@ class Meter
   {
     get { return name; }
   }
+  public int SlaveId
+  {
+    get { return slaveId; }
+  }
 
   public Meter(string name, byte slaveId, ModbusService modbusService)
   {
