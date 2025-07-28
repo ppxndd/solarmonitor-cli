@@ -2,6 +2,7 @@
 using Npgsql;
 using System.IO.Ports;
 using EasyModbus;
+using Serilog;
 
 class Program
 {
@@ -16,6 +17,7 @@ class Program
   {
 
     configSvc = new ConfigService();
+    logSvc = new LoggingService();
     while (true)
     {
       string? rawInput = Console.ReadLine();
@@ -76,8 +78,19 @@ class Program
             string meterName = arguments[0];
             byte slaveId;
             byte.TryParse(arguments[1], out slaveId);
-            Meter meter = new Meter(meterName, slaveId, modbusSvc);
-            meters = meters.Concat([meter]).ToArray();
+            Console.WriteLine("\nAdding meter...");
+            try
+            {
+              Meter meter = new Meter(meterName, slaveId, modbusSvc, logSvc, dbSvc);
+              meter.ReadValueFromMeter(1);
+              meters = meters.Concat([meter]).ToArray();
+              Console.WriteLine("Add meter success.\n");
+            }
+            catch (Exception ex)
+            {
+              Console.WriteLine($"Add meter failed meter not response.\n {ex.Message}");
+
+            }
           }
           break;
         case "meter-read":
@@ -93,16 +106,17 @@ class Program
             meter.ReadValueFromMeter(quantity);
           }
           break;
-        case "meter-display":
+        case "meter-list":
           if (meters.Length < 1) Console.WriteLine("No meter in this system.");
           else
           {
             Console.WriteLine("\n-----* Meters detail *-----");
-            foreach (Meter meter in meters)
+            for (int i=0; i<meters.Length; i++) 
             {
               try
               {
-                Console.WriteLine($"Slave : {meter.SlaveId} Name : {meter.Name}");
+                Meter meter = meters[i];
+                Console.WriteLine($"Index: {i} Slave Id : {meter.SlaveId} Name : {meter.Name}");
               }
               catch
               {
@@ -111,11 +125,26 @@ class Program
             }
           }
           break;
-        case "db-connect":
-          dbSvc = new DatabaseService();
+        case "meter-run":
+          if (meters.Length < 1) Console.WriteLine("No meter in this system.");
+          else
+          {
+            for (int i = 0; i < meters.Length; i++)
+            {
+              meters[i].StartBackgroundReading(TimeSpan.FromMinutes(1));
+              Console.WriteLine($"{meters[i].Name} start reading...");
+            }
+            Console.WriteLine($"Press Enter to stop...");
+            Console.ReadLine();
+
+            for (int i = 0; i < meters.Length; i++)
+            {
+              meters[i].StopBackgroundReading();
+            }
+          }
           break;
-        case "log-test":
-          logSvc = new LoggingService();
+        case "db-connect":
+          dbSvc = new DatabaseService(logSvc);
           break;
         case "exit":
           Console.WriteLine("Goodbye!");

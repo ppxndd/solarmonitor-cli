@@ -7,16 +7,16 @@ class ModbusService : IDisposable
   private ModbusClient modbusClient;
   public ModbusService(string serialPort, int baudrate, string parity, string stopbits, int unitIden)
   {
-    modbusClient = new ModbusClient(serialPort);
+    this.modbusClient = new ModbusClient(serialPort);
 
-    modbusClient.Baudrate = baudrate;
-    modbusClient.Parity = this.SetParity(parity);
+    this.modbusClient.Baudrate = baudrate;
+    this.modbusClient.Parity = this.SetParity(parity);
 
-    modbusClient.StopBits = this.SetStopbits(stopbits);
-    modbusClient.UnitIdentifier = (byte)unitIden;
+    this.modbusClient.StopBits = this.SetStopbits(stopbits);
+    this.modbusClient.UnitIdentifier = (byte)unitIden;
     try
     {
-      modbusClient.Connect();
+      this.modbusClient.Connect();
       Console.WriteLine($"Connect modbus serial port {serialPort} successfully.");
     }
     catch (EasyModbus.Exceptions.ModbusException mex)
@@ -35,7 +35,7 @@ class ModbusService : IDisposable
 
   private System.IO.Ports.Parity SetParity(string parity)
   {
-    if (modbusClient == null) return System.IO.Ports.Parity.None;
+    if (this.modbusClient == null) return System.IO.Ports.Parity.None;
 
     if (parity == "none")
     {
@@ -57,7 +57,7 @@ class ModbusService : IDisposable
 
   private System.IO.Ports.StopBits SetStopbits(string stopbits)
   {
-    if (modbusClient == null) return System.IO.Ports.StopBits.None;
+    if (this.modbusClient == null) return System.IO.Ports.StopBits.None;
     if (stopbits == "one")
     {
       return System.IO.Ports.StopBits.One;
@@ -74,7 +74,7 @@ class ModbusService : IDisposable
 
   public int[] ReadPairInput(byte slaveId, int startAddress, int quantity)
   {
-    modbusClient.UnitIdentifier = slaveId;
+    this.modbusClient.UnitIdentifier = slaveId;
     int[] rawValues = [];
     int loadTime = 0;
     quantity = quantity * 2;
@@ -83,11 +83,9 @@ class ModbusService : IDisposable
       quantity -= 40;
       loadTime++;
     }
-    Console.WriteLine($"\nLoad time = {loadTime}\nQuantity = {quantity}");
 
     for (int i = 0; i < loadTime; i++)
     {
-      Console.WriteLine($"Chunk {i} quantity {quantity} start address {startAddress}");
       int[] readedValues = this.modbusClient.ReadInputRegisters(startAddress, 40);
       rawValues = rawValues.Concat(readedValues).ToArray();
       startAddress += 40;
@@ -95,7 +93,6 @@ class ModbusService : IDisposable
 
     if (quantity > 0)
     {
-      Console.WriteLine($"quantity {quantity} start address {startAddress}");
       int[] readedValues = this.modbusClient.ReadInputRegisters(startAddress, quantity);
       rawValues = rawValues.Concat(readedValues).ToArray();
       startAddress += quantity;
@@ -121,7 +118,7 @@ class ModbusService : IDisposable
       try
       {
         this.modbusClient.UnitIdentifier = (byte)i;
-        int[] values = this.modbusClient.ReadInputRegisters(0, 1);
+        int[] values = this.modbusClient.ReadInputRegisters(0, 10);
         Console.WriteLine($"Found slave id {i}");
       }
       catch

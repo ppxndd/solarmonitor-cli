@@ -1,0 +1,726 @@
+2025-07-25 19:59:07.252 +07:00 [INF] Meter: Meter2 (ID: 3) Readings:
+Voltage 1: 227.87894V, Voltage 2:231.0922V, Voltage 3: 228.7712V
+Current 1: 1.550389A, Current 2: 3.6577544A, Current 3: 1.9360702A
+Watt 1: 94.69738W, Watt 2: 94.33302W, Watt 3: 141.12073W
+VA 1: 353.301, VA 2: 845.2785, VA 3: 442.91708
+VAR 1: 220.95978, VAR 2: -727.24445, VAR 3: -371.36075
+
+2025-07-25 22:00:13.134 +07:00 [WRN] Incomplete meter data for meter1 (ID: 3)
+2025-07-25 22:00:21.023 +07:00 [WRN] Incomplete meter data for meter2 (ID: 2)
+2025-07-25 22:00:29.096 +07:00 [WRN] Incomplete meter data for meter1 (ID: 3)
+2025-07-25 22:01:03.151 +07:00 [INF] Meter: meter2 (ID: 2) Readings:
+Voltage 1: 0V, Voltage 2:0V, Voltage 3: 0V
+Current 1: 0A, Current 2: 0A, Current 3: 0A
+Watt 1: 0W, Watt 2: 0W, Watt 3: 0W
+VA 1: 0, VA 2: 0, VA 3: 0
+VAR 1: 0, VAR 2: 0, VAR 3: 0
+
+2025-07-25 22:03:43.738 +07:00 [WRN] Incomplete meter data for meter1 (ID: 3)
+2025-07-25 22:03:50.788 +07:00 [WRN] Incomplete meter data for meter2 (ID: 2)
+2025-07-25 22:03:56.654 +07:00 [INF] Meter: meter1 (ID: 3) Readings:
+Voltage 1: 0V, Voltage 2:0V, Voltage 3: 0V
+Current 1: 0A, Current 2: 0A, Current 3: 0A
+Watt 1: 0W, Watt 2: 0W, Watt 3: 0W
+VA 1: 0, VA 2: 0, VA 3: 0
+VAR 1: 0, VAR 2: 0, VAR 3: 0
+
+2025-07-25 22:04:57.661 +07:00 [INF] Meter: meter2 (ID: 2) Readings:
+Voltage 1: 227.87894V, Voltage 2:231.0922V, Voltage 3: 228.7712V
+Current 1: 1.550389A, Current 2: 3.6577544A, Current 3: 1.9360702A
+Watt 1: 94.69738W, Watt 2: 94.33302W, Watt 3: 141.12073W
+VA 1: 353.301, VA 2: 845.2785, VA 3: 442.91708
+VAR 1: 220.95978, VAR 2: -727.24445, VAR 3: -371.36075
+
+2025-07-25 22:04:57.661 +07:00 [INF] Meter: meter1 (ID: 3) Readings:
+Voltage 1: 227.87894V, Voltage 2:231.0922V, Voltage 3: 228.7712V
+Current 1: 1.550389A, Current 2: 3.6577544A, Current 3: 1.9360702A
+Watt 1: 94.69738W, Watt 2: 94.33302W, Watt 3: 141.12073W
+VA 1: 353.301, VA 2: 845.2785, VA 3: 442.91708
+VAR 1: 220.95978, VAR 2: -727.24445, VAR 3: -371.36075
+
+2025-07-25 22:05:59.756 +07:00 [INF] Meter: meter2 (ID: 2) Readings:
+Voltage 1: 0V, Voltage 2:0V, Voltage 3: 0V
+Current 1: 0A, Current 2: 0A, Current 3: 0A
+Watt 1: 0W, Watt 2: 0W, Watt 3: 0W
+VA 1: 0, VA 2: 0, VA 3: 0
+VAR 1: 0, VAR 2: 0, VAR 3: 0
+
+2025-07-25 22:06:59.822 +07:00 [INF] Meter: meter2 (ID: 2) Readings:
+Voltage 1: 0V, Voltage 2:0V, Voltage 3: 0V
+Current 1: 0A, Current 2: 0A, Current 3: 0A
+Watt 1: 0W, Watt 2: 0W, Watt 3: 0W
+VA 1: 0, VA 2: 0, VA 3: 0
+VAR 1: 0, VAR 2: 0, VAR 3: 0
+
+2025-07-25 22:06:59.822 +07:00 [INF] Meter: meter1 (ID: 3) Readings:
+Voltage 1: 0V, Voltage 2:0V, Voltage 3: 0V
+Current 1: 0A, Current 2: 0A, Current 3: 0A
+Watt 1: 0W, Watt 2: 0W, Watt 3: 0W
+VA 1: 0, VA 2: 0, VA 3: 0
+VAR 1: 0, VAR 2: 0, VAR 3: 0
+
+2025-07-25 22:08:02.918 +07:00 [INF] Meter: meter2 (ID: 2) Readings:
+Voltage 1: 0V, Voltage 2:0V, Voltage 3: 0V
+Current 1: 0A, Current 2: 0A, Current 3: 0A
+Watt 1: 0W, Watt 2: 0W, Watt 3: 0W
+VA 1: 0, VA 2: 0, VA 3: 0
+VAR 1: 0, VAR 2: 0, VAR 3: 0
+
+2025-07-25 22:09:02.933 +07:00 [INF] Meter: meter1 (ID: 3) Readings:
+Voltage 1: 227.87894V, Voltage 2:231.0922V, Voltage 3: 228.7712V
+Current 1: 1.550389A, Current 2: 3.6577544A, Current 3: 1.9360702A
+Watt 1: 94.69738W, Watt 2: 94.33302W, Watt 3: 141.12073W
+VA 1: 353.301, VA 2: 845.2785, VA 3: 442.91708
+VAR 1: 220.95978, VAR 2: -727.24445, VAR 3: -371.36075
+
+2025-07-25 22:09:02.996 +07:00 [INF] Meter: meter2 (ID: 2) Readings:
+Voltage 1: 0V, Voltage 2:0V, Voltage 3: 0V
+Current 1: 0A, Current 2: 0A, Current 3: 0A
+Watt 1: 0W, Watt 2: 0W, Watt 3: 0W
+VA 1: 0, VA 2: 0, VA 3: 0
+VAR 1: 0, VAR 2: 0, VAR 3: 0
+
+2025-07-25 22:10:02.996 +07:00 [INF] Meter: meter1 (ID: 3) Readings:
+Voltage 1: 227.87894V, Voltage 2:231.0922V, Voltage 3: 228.7712V
+Current 1: 1.550389A, Current 2: 3.6577544A, Current 3: 1.9360702A
+Watt 1: 94.69738W, Watt 2: 94.33302W, Watt 3: 141.12073W
+VA 1: 353.301, VA 2: 845.2785, VA 3: 442.91708
+VAR 1: 220.95978, VAR 2: -727.24445, VAR 3: -371.36075
+
+2025-07-25 22:10:03.064 +07:00 [INF] Meter: meter2 (ID: 2) Readings:
+Voltage 1: 0V, Voltage 2:0V, Voltage 3: 0V
+Current 1: 0A, Current 2: 0A, Current 3: 0A
+Watt 1: 0W, Watt 2: 0W, Watt 3: 0W
+VA 1: 0, VA 2: 0, VA 3: 0
+VAR 1: 0, VAR 2: 0, VAR 3: 0
+
+2025-07-25 22:11:03.071 +07:00 [INF] Meter: meter1 (ID: 3) Readings:
+Voltage 1: 227.87894V, Voltage 2:231.0922V, Voltage 3: 228.7712V
+Current 1: 1.550389A, Current 2: 3.6577544A, Current 3: 1.9360702A
+Watt 1: 94.69738W, Watt 2: 94.33302W, Watt 3: 141.12073W
+VA 1: 353.301, VA 2: 845.2785, VA 3: 442.91708
+VAR 1: 220.95978, VAR 2: -727.24445, VAR 3: -371.36075
+
+2025-07-25 22:11:03.135 +07:00 [INF] Meter: meter2 (ID: 2) Readings:
+Voltage 1: 0V, Voltage 2:0V, Voltage 3: 0V
+Current 1: 0A, Current 2: 0A, Current 3: 0A
+Watt 1: 0W, Watt 2: 0W, Watt 3: 0W
+VA 1: 0, VA 2: 0, VA 3: 0
+VAR 1: 0, VAR 2: 0, VAR 3: 0
+
+2025-07-25 22:12:03.122 +07:00 [INF] Meter: meter1 (ID: 3) Readings:
+Voltage 1: 227.87894V, Voltage 2:231.0922V, Voltage 3: 228.7712V
+Current 1: 1.550389A, Current 2: 3.6577544A, Current 3: 1.9360702A
+Watt 1: 94.69738W, Watt 2: 94.33302W, Watt 3: 141.12073W
+VA 1: 353.301, VA 2: 845.2785, VA 3: 442.91708
+VAR 1: 220.95978, VAR 2: -727.24445, VAR 3: -371.36075
+
+2025-07-25 22:12:03.187 +07:00 [INF] Meter: meter2 (ID: 2) Readings:
+Voltage 1: 0V, Voltage 2:0V, Voltage 3: 0V
+Current 1: 0A, Current 2: 0A, Current 3: 0A
+Watt 1: 0W, Watt 2: 0W, Watt 3: 0W
+VA 1: 0, VA 2: 0, VA 3: 0
+VAR 1: 0, VAR 2: 0, VAR 3: 0
+
+2025-07-25 22:13:03.186 +07:00 [INF] Meter: meter1 (ID: 3) Readings:
+Voltage 1: 227.87894V, Voltage 2:231.0922V, Voltage 3: 228.7712V
+Current 1: 1.550389A, Current 2: 3.6577544A, Current 3: 1.9360702A
+Watt 1: 94.69738W, Watt 2: 94.33302W, Watt 3: 141.12073W
+VA 1: 353.301, VA 2: 845.2785, VA 3: 442.91708
+VAR 1: 220.95978, VAR 2: -727.24445, VAR 3: -371.36075
+
+2025-07-25 22:13:03.265 +07:00 [INF] Meter: meter2 (ID: 2) Readings:
+Voltage 1: 0V, Voltage 2:0V, Voltage 3: 0V
+Current 1: 0A, Current 2: 0A, Current 3: 0A
+Watt 1: 0W, Watt 2: 0W, Watt 3: 0W
+VA 1: 0, VA 2: 0, VA 3: 0
+VAR 1: 0, VAR 2: 0, VAR 3: 0
+
+2025-07-25 22:14:03.259 +07:00 [INF] Meter: meter1 (ID: 3) Readings:
+Voltage 1: 227.87894V, Voltage 2:231.0922V, Voltage 3: 228.7712V
+Current 1: 1.550389A, Current 2: 3.6577544A, Current 3: 1.9360702A
+Watt 1: 94.69738W, Watt 2: 94.33302W, Watt 3: 141.12073W
+VA 1: 353.301, VA 2: 845.2785, VA 3: 442.91708
+VAR 1: 220.95978, VAR 2: -727.24445, VAR 3: -371.36075
+
+2025-07-25 22:14:03.349 +07:00 [INF] Meter: meter2 (ID: 2) Readings:
+Voltage 1: 0V, Voltage 2:0V, Voltage 3: 0V
+Current 1: 0A, Current 2: 0A, Current 3: 0A
+Watt 1: 0W, Watt 2: 0W, Watt 3: 0W
+VA 1: 0, VA 2: 0, VA 3: 0
+VAR 1: 0, VAR 2: 0, VAR 3: 0
+
+2025-07-25 22:15:03.333 +07:00 [INF] Meter: meter1 (ID: 3) Readings:
+Voltage 1: 227.87894V, Voltage 2:231.0922V, Voltage 3: 228.7712V
+Current 1: 1.550389A, Current 2: 3.6577544A, Current 3: 1.9360702A
+Watt 1: 94.69738W, Watt 2: 94.33302W, Watt 3: 141.12073W
+VA 1: 353.301, VA 2: 845.2785, VA 3: 442.91708
+VAR 1: 220.95978, VAR 2: -727.24445, VAR 3: -371.36075
+
+2025-07-25 22:15:03.412 +07:00 [INF] Meter: meter2 (ID: 2) Readings:
+Voltage 1: 0V, Voltage 2:0V, Voltage 3: 0V
+Current 1: 0A, Current 2: 0A, Current 3: 0A
+Watt 1: 0W, Watt 2: 0W, Watt 3: 0W
+VA 1: 0, VA 2: 0, VA 3: 0
+VAR 1: 0, VAR 2: 0, VAR 3: 0
+
+2025-07-25 22:16:03.400 +07:00 [INF] Meter: meter1 (ID: 3) Readings:
+Voltage 1: 227.87894V, Voltage 2:231.0922V, Voltage 3: 228.7712V
+Current 1: 1.550389A, Current 2: 3.6577544A, Current 3: 1.9360702A
+Watt 1: 94.69738W, Watt 2: 94.33302W, Watt 3: 141.12073W
+VA 1: 353.301, VA 2: 845.2785, VA 3: 442.91708
+VAR 1: 220.95978, VAR 2: -727.24445, VAR 3: -371.36075
+
+2025-07-25 22:16:03.461 +07:00 [INF] Meter: meter2 (ID: 2) Readings:
+Voltage 1: 0V, Voltage 2:0V, Voltage 3: 0V
+Current 1: 0A, Current 2: 0A, Current 3: 0A
+Watt 1: 0W, Watt 2: 0W, Watt 3: 0W
+VA 1: 0, VA 2: 0, VA 3: 0
+VAR 1: 0, VAR 2: 0, VAR 3: 0
+
+2025-07-25 22:17:04.469 +07:00 [INF] Meter: meter1 (ID: 3) Readings:
+Voltage 1: 0V, Voltage 2:0V, Voltage 3: 0V
+Current 1: 0A, Current 2: 0A, Current 3: 0A
+Watt 1: 0W, Watt 2: 0W, Watt 3: 0W
+VA 1: 0, VA 2: 0, VA 3: 0
+VAR 1: 0, VAR 2: 0, VAR 3: 0
+
+2025-07-25 22:17:04.469 +07:00 [INF] Meter: meter2 (ID: 2) Readings:
+Voltage 1: 0V, Voltage 2:0V, Voltage 3: 0V
+Current 1: 0A, Current 2: 0A, Current 3: 0A
+Watt 1: 0W, Watt 2: 0W, Watt 3: 0W
+VA 1: 0, VA 2: 0, VA 3: 0
+VAR 1: 0, VAR 2: 0, VAR 3: 0
+
+2025-07-25 22:18:07.524 +07:00 [INF] Meter: meter2 (ID: 2) Readings:
+Voltage 1: 227.87894V, Voltage 2:231.0922V, Voltage 3: 228.7712V
+Current 1: 1.550389A, Current 2: 3.6577544A, Current 3: 1.9360702A
+Watt 1: 94.69738W, Watt 2: 94.33302W, Watt 3: 141.12073W
+VA 1: 353.301, VA 2: 845.2785, VA 3: 442.91708
+VAR 1: 220.95978, VAR 2: -727.24445, VAR 3: -371.36075
+
+2025-07-25 22:19:08.549 +07:00 [INF] Meter: meter1 (ID: 3) Readings:
+Voltage 1: 0V, Voltage 2:0V, Voltage 3: 0V
+Current 1: 0A, Current 2: 0A, Current 3: 0A
+Watt 1: 0W, Watt 2: 0W, Watt 3: 0W
+VA 1: 0, VA 2: 0, VA 3: 0
+VAR 1: 0, VAR 2: 0, VAR 3: 0
+
+2025-07-25 22:19:08.549 +07:00 [INF] Meter: meter2 (ID: 2) Readings:
+Voltage 1: 0V, Voltage 2:0V, Voltage 3: 0V
+Current 1: 0A, Current 2: 0A, Current 3: 0A
+Watt 1: 0W, Watt 2: 0W, Watt 3: 0W
+VA 1: 0, VA 2: 0, VA 3: 0
+VAR 1: 0, VAR 2: 0, VAR 3: 0
+
+2025-07-25 22:20:11.647 +07:00 [INF] Meter: meter1 (ID: 3) Readings:
+Voltage 1: 227.87894V, Voltage 2:231.0922V, Voltage 3: 228.7712V
+Current 1: 1.550389A, Current 2: 3.6577544A, Current 3: 1.9360702A
+Watt 1: 94.69738W, Watt 2: 94.33302W, Watt 3: 141.12073W
+VA 1: 353.301, VA 2: 845.2785, VA 3: 442.91708
+VAR 1: 220.95978, VAR 2: -727.24445, VAR 3: -371.36075
+
+2025-07-25 22:21:11.637 +07:00 [INF] Meter: meter2 (ID: 2) Readings:
+Voltage 1: 0V, Voltage 2:0V, Voltage 3: 0V
+Current 1: 0A, Current 2: 0A, Current 3: 0A
+Watt 1: 0W, Watt 2: 0W, Watt 3: 0W
+VA 1: 0, VA 2: 0, VA 3: 0
+VAR 1: 0, VAR 2: 0, VAR 3: 0
+
+2025-07-25 22:21:11.705 +07:00 [INF] Meter: meter1 (ID: 3) Readings:
+Voltage 1: 227.87894V, Voltage 2:231.0922V, Voltage 3: 228.7712V
+Current 1: 1.550389A, Current 2: 3.6577544A, Current 3: 1.9360702A
+Watt 1: 94.69738W, Watt 2: 94.33302W, Watt 3: 141.12073W
+VA 1: 353.301, VA 2: 845.2785, VA 3: 442.91708
+VAR 1: 220.95978, VAR 2: -727.24445, VAR 3: -371.36075
+
+2025-07-25 22:22:11.706 +07:00 [INF] Meter: meter2 (ID: 2) Readings:
+Voltage 1: 0V, Voltage 2:0V, Voltage 3: 0V
+Current 1: 0A, Current 2: 0A, Current 3: 0A
+Watt 1: 0W, Watt 2: 0W, Watt 3: 0W
+VA 1: 0, VA 2: 0, VA 3: 0
+VAR 1: 0, VAR 2: 0, VAR 3: 0
+
+2025-07-25 22:22:11.770 +07:00 [INF] Meter: meter1 (ID: 3) Readings:
+Voltage 1: 227.87894V, Voltage 2:231.0922V, Voltage 3: 228.7712V
+Current 1: 1.550389A, Current 2: 3.6577544A, Current 3: 1.9360702A
+Watt 1: 94.69738W, Watt 2: 94.33302W, Watt 3: 141.12073W
+VA 1: 353.301, VA 2: 845.2785, VA 3: 442.91708
+VAR 1: 220.95978, VAR 2: -727.24445, VAR 3: -371.36075
+
+2025-07-25 22:23:11.759 +07:00 [INF] Meter: meter2 (ID: 2) Readings:
+Voltage 1: 0V, Voltage 2:0V, Voltage 3: 0V
+Current 1: 0A, Current 2: 0A, Current 3: 0A
+Watt 1: 0W, Watt 2: 0W, Watt 3: 0W
+VA 1: 0, VA 2: 0, VA 3: 0
+VAR 1: 0, VAR 2: 0, VAR 3: 0
+
+2025-07-25 22:23:11.815 +07:00 [INF] Meter: meter1 (ID: 3) Readings:
+Voltage 1: 227.87894V, Voltage 2:231.0922V, Voltage 3: 228.7712V
+Current 1: 1.550389A, Current 2: 3.6577544A, Current 3: 1.9360702A
+Watt 1: 94.69738W, Watt 2: 94.33302W, Watt 3: 141.12073W
+VA 1: 353.301, VA 2: 845.2785, VA 3: 442.91708
+VAR 1: 220.95978, VAR 2: -727.24445, VAR 3: -371.36075
+
+2025-07-25 22:24:11.825 +07:00 [INF] Meter: meter2 (ID: 2) Readings:
+Voltage 1: 0V, Voltage 2:0V, Voltage 3: 0V
+Current 1: 0A, Current 2: 0A, Current 3: 0A
+Watt 1: 0W, Watt 2: 0W, Watt 3: 0W
+VA 1: 0, VA 2: 0, VA 3: 0
+VAR 1: 0, VAR 2: 0, VAR 3: 0
+
+2025-07-25 22:24:11.892 +07:00 [INF] Meter: meter1 (ID: 3) Readings:
+Voltage 1: 227.87894V, Voltage 2:231.0922V, Voltage 3: 228.7712V
+Current 1: 1.550389A, Current 2: 3.6577544A, Current 3: 1.9360702A
+Watt 1: 94.69738W, Watt 2: 94.33302W, Watt 3: 141.12073W
+VA 1: 353.301, VA 2: 845.2785, VA 3: 442.91708
+VAR 1: 220.95978, VAR 2: -727.24445, VAR 3: -371.36075
+
+2025-07-25 22:25:11.889 +07:00 [INF] Meter: meter2 (ID: 2) Readings:
+Voltage 1: 0V, Voltage 2:0V, Voltage 3: 0V
+Current 1: 0A, Current 2: 0A, Current 3: 0A
+Watt 1: 0W, Watt 2: 0W, Watt 3: 0W
+VA 1: 0, VA 2: 0, VA 3: 0
+VAR 1: 0, VAR 2: 0, VAR 3: 0
+
+2025-07-25 22:25:11.968 +07:00 [INF] Meter: meter1 (ID: 3) Readings:
+Voltage 1: 227.87894V, Voltage 2:231.0922V, Voltage 3: 228.7712V
+Current 1: 1.550389A, Current 2: 3.6577544A, Current 3: 1.9360702A
+Watt 1: 94.69738W, Watt 2: 94.33302W, Watt 3: 141.12073W
+VA 1: 353.301, VA 2: 845.2785, VA 3: 442.91708
+VAR 1: 220.95978, VAR 2: -727.24445, VAR 3: -371.36075
+
+2025-07-25 22:26:11.966 +07:00 [INF] Meter: meter2 (ID: 2) Readings:
+Voltage 1: 0V, Voltage 2:0V, Voltage 3: 0V
+Current 1: 0A, Current 2: 0A, Current 3: 0A
+Watt 1: 0W, Watt 2: 0W, Watt 3: 0W
+VA 1: 0, VA 2: 0, VA 3: 0
+VAR 1: 0, VAR 2: 0, VAR 3: 0
+
+2025-07-25 22:26:12.050 +07:00 [INF] Meter: meter1 (ID: 3) Readings:
+Voltage 1: 227.87894V, Voltage 2:231.0922V, Voltage 3: 228.7712V
+Current 1: 1.550389A, Current 2: 3.6577544A, Current 3: 1.9360702A
+Watt 1: 94.69738W, Watt 2: 94.33302W, Watt 3: 141.12073W
+VA 1: 353.301, VA 2: 845.2785, VA 3: 442.91708
+VAR 1: 220.95978, VAR 2: -727.24445, VAR 3: -371.36075
+
+2025-07-25 22:27:12.025 +07:00 [INF] Meter: meter2 (ID: 2) Readings:
+Voltage 1: 0V, Voltage 2:0V, Voltage 3: 0V
+Current 1: 0A, Current 2: 0A, Current 3: 0A
+Watt 1: 0W, Watt 2: 0W, Watt 3: 0W
+VA 1: 0, VA 2: 0, VA 3: 0
+VAR 1: 0, VAR 2: 0, VAR 3: 0
+
+2025-07-25 22:27:12.118 +07:00 [INF] Meter: meter1 (ID: 3) Readings:
+Voltage 1: 227.87894V, Voltage 2:231.0922V, Voltage 3: 228.7712V
+Current 1: 1.550389A, Current 2: 3.6577544A, Current 3: 1.9360702A
+Watt 1: 94.69738W, Watt 2: 94.33302W, Watt 3: 141.12073W
+VA 1: 353.301, VA 2: 845.2785, VA 3: 442.91708
+VAR 1: 220.95978, VAR 2: -727.24445, VAR 3: -371.36075
+
+2025-07-25 22:28:12.085 +07:00 [INF] Meter: meter2 (ID: 2) Readings:
+Voltage 1: 0V, Voltage 2:0V, Voltage 3: 0V
+Current 1: 0A, Current 2: 0A, Current 3: 0A
+Watt 1: 0W, Watt 2: 0W, Watt 3: 0W
+VA 1: 0, VA 2: 0, VA 3: 0
+VAR 1: 0, VAR 2: 0, VAR 3: 0
+
+2025-07-25 22:28:12.185 +07:00 [INF] Meter: meter1 (ID: 3) Readings:
+Voltage 1: 227.87894V, Voltage 2:231.0922V, Voltage 3: 228.7712V
+Current 1: 1.550389A, Current 2: 3.6577544A, Current 3: 1.9360702A
+Watt 1: 94.69738W, Watt 2: 94.33302W, Watt 3: 141.12073W
+VA 1: 353.301, VA 2: 845.2785, VA 3: 442.91708
+VAR 1: 220.95978, VAR 2: -727.24445, VAR 3: -371.36075
+
+2025-07-25 22:29:12.144 +07:00 [INF] Meter: meter2 (ID: 2) Readings:
+Voltage 1: 0V, Voltage 2:0V, Voltage 3: 0V
+Current 1: 0A, Current 2: 0A, Current 3: 0A
+Watt 1: 0W, Watt 2: 0W, Watt 3: 0W
+VA 1: 0, VA 2: 0, VA 3: 0
+VAR 1: 0, VAR 2: 0, VAR 3: 0
+
+2025-07-25 22:29:12.256 +07:00 [INF] Meter: meter1 (ID: 3) Readings:
+Voltage 1: 227.87894V, Voltage 2:231.0922V, Voltage 3: 228.7712V
+Current 1: 1.550389A, Current 2: 3.6577544A, Current 3: 1.9360702A
+Watt 1: 94.69738W, Watt 2: 94.33302W, Watt 3: 141.12073W
+VA 1: 353.301, VA 2: 845.2785, VA 3: 442.91708
+VAR 1: 220.95978, VAR 2: -727.24445, VAR 3: -371.36075
+
+2025-07-25 22:30:12.220 +07:00 [INF] Meter: meter2 (ID: 2) Readings:
+Voltage 1: 0V, Voltage 2:0V, Voltage 3: 0V
+Current 1: 0A, Current 2: 0A, Current 3: 0A
+Watt 1: 0W, Watt 2: 0W, Watt 3: 0W
+VA 1: 0, VA 2: 0, VA 3: 0
+VAR 1: 0, VAR 2: 0, VAR 3: 0
+
+2025-07-25 22:30:12.330 +07:00 [INF] Meter: meter1 (ID: 3) Readings:
+Voltage 1: 227.87894V, Voltage 2:231.0922V, Voltage 3: 228.7712V
+Current 1: 1.550389A, Current 2: 3.6577544A, Current 3: 1.9360702A
+Watt 1: 94.69738W, Watt 2: 94.33302W, Watt 3: 141.12073W
+VA 1: 353.301, VA 2: 845.2785, VA 3: 442.91708
+VAR 1: 220.95978, VAR 2: -727.24445, VAR 3: -371.36075
+
+2025-07-25 22:31:12.285 +07:00 [INF] Meter: meter2 (ID: 2) Readings:
+Voltage 1: 0V, Voltage 2:0V, Voltage 3: 0V
+Current 1: 0A, Current 2: 0A, Current 3: 0A
+Watt 1: 0W, Watt 2: 0W, Watt 3: 0W
+VA 1: 0, VA 2: 0, VA 3: 0
+VAR 1: 0, VAR 2: 0, VAR 3: 0
+
+2025-07-25 22:31:12.395 +07:00 [INF] Meter: meter1 (ID: 3) Readings:
+Voltage 1: 227.87894V, Voltage 2:231.0922V, Voltage 3: 228.7712V
+Current 1: 1.550389A, Current 2: 3.6577544A, Current 3: 1.9360702A
+Watt 1: 94.69738W, Watt 2: 94.33302W, Watt 3: 141.12073W
+VA 1: 353.301, VA 2: 845.2785, VA 3: 442.91708
+VAR 1: 220.95978, VAR 2: -727.24445, VAR 3: -371.36075
+
+2025-07-25 22:32:12.362 +07:00 [INF] Meter: meter2 (ID: 2) Readings:
+Voltage 1: 0V, Voltage 2:0V, Voltage 3: 0V
+Current 1: 0A, Current 2: 0A, Current 3: 0A
+Watt 1: 0W, Watt 2: 0W, Watt 3: 0W
+VA 1: 0, VA 2: 0, VA 3: 0
+VAR 1: 0, VAR 2: 0, VAR 3: 0
+
+2025-07-25 22:32:12.453 +07:00 [INF] Meter: meter1 (ID: 3) Readings:
+Voltage 1: 227.87894V, Voltage 2:231.0922V, Voltage 3: 228.7712V
+Current 1: 1.550389A, Current 2: 3.6577544A, Current 3: 1.9360702A
+Watt 1: 94.69738W, Watt 2: 94.33302W, Watt 3: 141.12073W
+VA 1: 353.301, VA 2: 845.2785, VA 3: 442.91708
+VAR 1: 220.95978, VAR 2: -727.24445, VAR 3: -371.36075
+
+2025-07-25 22:33:12.436 +07:00 [INF] Meter: meter2 (ID: 2) Readings:
+Voltage 1: 0V, Voltage 2:0V, Voltage 3: 0V
+Current 1: 0A, Current 2: 0A, Current 3: 0A
+Watt 1: 0W, Watt 2: 0W, Watt 3: 0W
+VA 1: 0, VA 2: 0, VA 3: 0
+VAR 1: 0, VAR 2: 0, VAR 3: 0
+
+2025-07-25 22:33:12.529 +07:00 [INF] Meter: meter1 (ID: 3) Readings:
+Voltage 1: 227.87894V, Voltage 2:231.0922V, Voltage 3: 228.7712V
+Current 1: 1.550389A, Current 2: 3.6577544A, Current 3: 1.9360702A
+Watt 1: 94.69738W, Watt 2: 94.33302W, Watt 3: 141.12073W
+VA 1: 353.301, VA 2: 845.2785, VA 3: 442.91708
+VAR 1: 220.95978, VAR 2: -727.24445, VAR 3: -371.36075
+
+2025-07-25 22:34:12.494 +07:00 [INF] Meter: meter2 (ID: 2) Readings:
+Voltage 1: 0V, Voltage 2:0V, Voltage 3: 0V
+Current 1: 0A, Current 2: 0A, Current 3: 0A
+Watt 1: 0W, Watt 2: 0W, Watt 3: 0W
+VA 1: 0, VA 2: 0, VA 3: 0
+VAR 1: 0, VAR 2: 0, VAR 3: 0
+
+2025-07-25 22:34:12.605 +07:00 [INF] Meter: meter1 (ID: 3) Readings:
+Voltage 1: 227.87894V, Voltage 2:231.0922V, Voltage 3: 228.7712V
+Current 1: 1.550389A, Current 2: 3.6577544A, Current 3: 1.9360702A
+Watt 1: 94.69738W, Watt 2: 94.33302W, Watt 3: 141.12073W
+VA 1: 353.301, VA 2: 845.2785, VA 3: 442.91708
+VAR 1: 220.95978, VAR 2: -727.24445, VAR 3: -371.36075
+
+2025-07-25 22:35:12.564 +07:00 [INF] Meter: meter2 (ID: 2) Readings:
+Voltage 1: 0V, Voltage 2:0V, Voltage 3: 0V
+Current 1: 0A, Current 2: 0A, Current 3: 0A
+Watt 1: 0W, Watt 2: 0W, Watt 3: 0W
+VA 1: 0, VA 2: 0, VA 3: 0
+VAR 1: 0, VAR 2: 0, VAR 3: 0
+
+2025-07-25 22:35:12.676 +07:00 [INF] Meter: meter1 (ID: 3) Readings:
+Voltage 1: 227.87894V, Voltage 2:231.0922V, Voltage 3: 228.7712V
+Current 1: 1.550389A, Current 2: 3.6577544A, Current 3: 1.9360702A
+Watt 1: 94.69738W, Watt 2: 94.33302W, Watt 3: 141.12073W
+VA 1: 353.301, VA 2: 845.2785, VA 3: 442.91708
+VAR 1: 220.95978, VAR 2: -727.24445, VAR 3: -371.36075
+
+2025-07-25 22:36:12.633 +07:00 [INF] Meter: meter2 (ID: 2) Readings:
+Voltage 1: 0V, Voltage 2:0V, Voltage 3: 0V
+Current 1: 0A, Current 2: 0A, Current 3: 0A
+Watt 1: 0W, Watt 2: 0W, Watt 3: 0W
+VA 1: 0, VA 2: 0, VA 3: 0
+VAR 1: 0, VAR 2: 0, VAR 3: 0
+
+2025-07-25 22:36:12.744 +07:00 [INF] Meter: meter1 (ID: 3) Readings:
+Voltage 1: 227.87894V, Voltage 2:231.0922V, Voltage 3: 228.7712V
+Current 1: 1.550389A, Current 2: 3.6577544A, Current 3: 1.9360702A
+Watt 1: 94.69738W, Watt 2: 94.33302W, Watt 3: 141.12073W
+VA 1: 353.301, VA 2: 845.2785, VA 3: 442.91708
+VAR 1: 220.95978, VAR 2: -727.24445, VAR 3: -371.36075
+
+2025-07-25 22:37:12.714 +07:00 [INF] Meter: meter2 (ID: 2) Readings:
+Voltage 1: 0V, Voltage 2:0V, Voltage 3: 0V
+Current 1: 0A, Current 2: 0A, Current 3: 0A
+Watt 1: 0W, Watt 2: 0W, Watt 3: 0W
+VA 1: 0, VA 2: 0, VA 3: 0
+VAR 1: 0, VAR 2: 0, VAR 3: 0
+
+2025-07-25 22:37:12.797 +07:00 [INF] Meter: meter1 (ID: 3) Readings:
+Voltage 1: 227.87894V, Voltage 2:231.0922V, Voltage 3: 228.7712V
+Current 1: 1.550389A, Current 2: 3.6577544A, Current 3: 1.9360702A
+Watt 1: 94.69738W, Watt 2: 94.33302W, Watt 3: 141.12073W
+VA 1: 353.301, VA 2: 845.2785, VA 3: 442.91708
+VAR 1: 220.95978, VAR 2: -727.24445, VAR 3: -371.36075
+
+2025-07-25 22:38:12.780 +07:00 [INF] Meter: meter2 (ID: 2) Readings:
+Voltage 1: 0V, Voltage 2:0V, Voltage 3: 0V
+Current 1: 0A, Current 2: 0A, Current 3: 0A
+Watt 1: 0W, Watt 2: 0W, Watt 3: 0W
+VA 1: 0, VA 2: 0, VA 3: 0
+VAR 1: 0, VAR 2: 0, VAR 3: 0
+
+2025-07-25 22:38:12.861 +07:00 [INF] Meter: meter1 (ID: 3) Readings:
+Voltage 1: 227.87894V, Voltage 2:231.0922V, Voltage 3: 228.7712V
+Current 1: 1.550389A, Current 2: 3.6577544A, Current 3: 1.9360702A
+Watt 1: 94.69738W, Watt 2: 94.33302W, Watt 3: 141.12073W
+VA 1: 353.301, VA 2: 845.2785, VA 3: 442.91708
+VAR 1: 220.95978, VAR 2: -727.24445, VAR 3: -371.36075
+
+2025-07-25 22:39:12.858 +07:00 [INF] Meter: meter2 (ID: 2) Readings:
+Voltage 1: 0V, Voltage 2:0V, Voltage 3: 0V
+Current 1: 0A, Current 2: 0A, Current 3: 0A
+Watt 1: 0W, Watt 2: 0W, Watt 3: 0W
+VA 1: 0, VA 2: 0, VA 3: 0
+VAR 1: 0, VAR 2: 0, VAR 3: 0
+
+2025-07-25 22:39:12.936 +07:00 [INF] Meter: meter1 (ID: 3) Readings:
+Voltage 1: 227.87894V, Voltage 2:231.0922V, Voltage 3: 228.7712V
+Current 1: 1.550389A, Current 2: 3.6577544A, Current 3: 1.9360702A
+Watt 1: 94.69738W, Watt 2: 94.33302W, Watt 3: 141.12073W
+VA 1: 353.301, VA 2: 845.2785, VA 3: 442.91708
+VAR 1: 220.95978, VAR 2: -727.24445, VAR 3: -371.36075
+
+2025-07-25 22:40:12.929 +07:00 [INF] Meter: meter2 (ID: 2) Readings:
+Voltage 1: 0V, Voltage 2:0V, Voltage 3: 0V
+Current 1: 0A, Current 2: 0A, Current 3: 0A
+Watt 1: 0W, Watt 2: 0W, Watt 3: 0W
+VA 1: 0, VA 2: 0, VA 3: 0
+VAR 1: 0, VAR 2: 0, VAR 3: 0
+
+2025-07-25 22:40:13.009 +07:00 [INF] Meter: meter1 (ID: 3) Readings:
+Voltage 1: 227.87894V, Voltage 2:231.0922V, Voltage 3: 228.7712V
+Current 1: 1.550389A, Current 2: 3.6577544A, Current 3: 1.9360702A
+Watt 1: 94.69738W, Watt 2: 94.33302W, Watt 3: 141.12073W
+VA 1: 353.301, VA 2: 845.2785, VA 3: 442.91708
+VAR 1: 220.95978, VAR 2: -727.24445, VAR 3: -371.36075
+
+2025-07-25 22:41:12.999 +07:00 [INF] Meter: meter2 (ID: 2) Readings:
+Voltage 1: 0V, Voltage 2:0V, Voltage 3: 0V
+Current 1: 0A, Current 2: 0A, Current 3: 0A
+Watt 1: 0W, Watt 2: 0W, Watt 3: 0W
+VA 1: 0, VA 2: 0, VA 3: 0
+VAR 1: 0, VAR 2: 0, VAR 3: 0
+
+2025-07-25 22:41:13.079 +07:00 [INF] Meter: meter1 (ID: 3) Readings:
+Voltage 1: 227.87894V, Voltage 2:231.0922V, Voltage 3: 228.7712V
+Current 1: 1.550389A, Current 2: 3.6577544A, Current 3: 1.9360702A
+Watt 1: 94.69738W, Watt 2: 94.33302W, Watt 3: 141.12073W
+VA 1: 353.301, VA 2: 845.2785, VA 3: 442.91708
+VAR 1: 220.95978, VAR 2: -727.24445, VAR 3: -371.36075
+
+2025-07-25 22:42:13.062 +07:00 [INF] Meter: meter2 (ID: 2) Readings:
+Voltage 1: 0V, Voltage 2:0V, Voltage 3: 0V
+Current 1: 0A, Current 2: 0A, Current 3: 0A
+Watt 1: 0W, Watt 2: 0W, Watt 3: 0W
+VA 1: 0, VA 2: 0, VA 3: 0
+VAR 1: 0, VAR 2: 0, VAR 3: 0
+
+2025-07-25 22:42:13.154 +07:00 [INF] Meter: meter1 (ID: 3) Readings:
+Voltage 1: 227.87894V, Voltage 2:231.0922V, Voltage 3: 228.7712V
+Current 1: 1.550389A, Current 2: 3.6577544A, Current 3: 1.9360702A
+Watt 1: 94.69738W, Watt 2: 94.33302W, Watt 3: 141.12073W
+VA 1: 353.301, VA 2: 845.2785, VA 3: 442.91708
+VAR 1: 220.95978, VAR 2: -727.24445, VAR 3: -371.36075
+
+2025-07-25 22:43:13.135 +07:00 [INF] Meter: meter2 (ID: 2) Readings:
+Voltage 1: 0V, Voltage 2:0V, Voltage 3: 0V
+Current 1: 0A, Current 2: 0A, Current 3: 0A
+Watt 1: 0W, Watt 2: 0W, Watt 3: 0W
+VA 1: 0, VA 2: 0, VA 3: 0
+VAR 1: 0, VAR 2: 0, VAR 3: 0
+
+2025-07-25 22:43:13.217 +07:00 [INF] Meter: meter1 (ID: 3) Readings:
+Voltage 1: 227.87894V, Voltage 2:231.0922V, Voltage 3: 228.7712V
+Current 1: 1.550389A, Current 2: 3.6577544A, Current 3: 1.9360702A
+Watt 1: 94.69738W, Watt 2: 94.33302W, Watt 3: 141.12073W
+VA 1: 353.301, VA 2: 845.2785, VA 3: 442.91708
+VAR 1: 220.95978, VAR 2: -727.24445, VAR 3: -371.36075
+
+2025-07-25 22:44:13.209 +07:00 [INF] Meter: meter2 (ID: 2) Readings:
+Voltage 1: 0V, Voltage 2:0V, Voltage 3: 0V
+Current 1: 0A, Current 2: 0A, Current 3: 0A
+Watt 1: 0W, Watt 2: 0W, Watt 3: 0W
+VA 1: 0, VA 2: 0, VA 3: 0
+VAR 1: 0, VAR 2: 0, VAR 3: 0
+
+2025-07-25 22:44:13.288 +07:00 [INF] Meter: meter1 (ID: 3) Readings:
+Voltage 1: 227.87894V, Voltage 2:231.0922V, Voltage 3: 228.7712V
+Current 1: 1.550389A, Current 2: 3.6577544A, Current 3: 1.9360702A
+Watt 1: 94.69738W, Watt 2: 94.33302W, Watt 3: 141.12073W
+VA 1: 353.301, VA 2: 845.2785, VA 3: 442.91708
+VAR 1: 220.95978, VAR 2: -727.24445, VAR 3: -371.36075
+
+2025-07-25 22:45:13.277 +07:00 [INF] Meter: meter2 (ID: 2) Readings:
+Voltage 1: 0V, Voltage 2:0V, Voltage 3: 0V
+Current 1: 0A, Current 2: 0A, Current 3: 0A
+Watt 1: 0W, Watt 2: 0W, Watt 3: 0W
+VA 1: 0, VA 2: 0, VA 3: 0
+VAR 1: 0, VAR 2: 0, VAR 3: 0
+
+2025-07-25 22:45:13.356 +07:00 [INF] Meter: meter1 (ID: 3) Readings:
+Voltage 1: 227.87894V, Voltage 2:231.0922V, Voltage 3: 228.7712V
+Current 1: 1.550389A, Current 2: 3.6577544A, Current 3: 1.9360702A
+Watt 1: 94.69738W, Watt 2: 94.33302W, Watt 3: 141.12073W
+VA 1: 353.301, VA 2: 845.2785, VA 3: 442.91708
+VAR 1: 220.95978, VAR 2: -727.24445, VAR 3: -371.36075
+
+2025-07-25 22:46:13.347 +07:00 [INF] Meter: meter2 (ID: 2) Readings:
+Voltage 1: 0V, Voltage 2:0V, Voltage 3: 0V
+Current 1: 0A, Current 2: 0A, Current 3: 0A
+Watt 1: 0W, Watt 2: 0W, Watt 3: 0W
+VA 1: 0, VA 2: 0, VA 3: 0
+VAR 1: 0, VAR 2: 0, VAR 3: 0
+
+2025-07-25 22:46:13.413 +07:00 [INF] Meter: meter1 (ID: 3) Readings:
+Voltage 1: 227.87894V, Voltage 2:231.0922V, Voltage 3: 228.7712V
+Current 1: 1.550389A, Current 2: 3.6577544A, Current 3: 1.9360702A
+Watt 1: 94.69738W, Watt 2: 94.33302W, Watt 3: 141.12073W
+VA 1: 353.301, VA 2: 845.2785, VA 3: 442.91708
+VAR 1: 220.95978, VAR 2: -727.24445, VAR 3: -371.36075
+
+2025-07-25 22:47:13.420 +07:00 [INF] Meter: meter2 (ID: 2) Readings:
+Voltage 1: 0V, Voltage 2:0V, Voltage 3: 0V
+Current 1: 0A, Current 2: 0A, Current 3: 0A
+Watt 1: 0W, Watt 2: 0W, Watt 3: 0W
+VA 1: 0, VA 2: 0, VA 3: 0
+VAR 1: 0, VAR 2: 0, VAR 3: 0
+
+2025-07-25 22:47:13.484 +07:00 [INF] Meter: meter1 (ID: 3) Readings:
+Voltage 1: 227.87894V, Voltage 2:231.0922V, Voltage 3: 228.7712V
+Current 1: 1.550389A, Current 2: 3.6577544A, Current 3: 1.9360702A
+Watt 1: 94.69738W, Watt 2: 94.33302W, Watt 3: 141.12073W
+VA 1: 353.301, VA 2: 845.2785, VA 3: 442.91708
+VAR 1: 220.95978, VAR 2: -727.24445, VAR 3: -371.36075
+
+2025-07-25 22:48:13.495 +07:00 [INF] Meter: meter2 (ID: 2) Readings:
+Voltage 1: 0V, Voltage 2:0V, Voltage 3: 0V
+Current 1: 0A, Current 2: 0A, Current 3: 0A
+Watt 1: 0W, Watt 2: 0W, Watt 3: 0W
+VA 1: 0, VA 2: 0, VA 3: 0
+VAR 1: 0, VAR 2: 0, VAR 3: 0
+
+2025-07-25 22:48:13.559 +07:00 [INF] Meter: meter1 (ID: 3) Readings:
+Voltage 1: 227.87894V, Voltage 2:231.0922V, Voltage 3: 228.7712V
+Current 1: 1.550389A, Current 2: 3.6577544A, Current 3: 1.9360702A
+Watt 1: 94.69738W, Watt 2: 94.33302W, Watt 3: 141.12073W
+VA 1: 353.301, VA 2: 845.2785, VA 3: 442.91708
+VAR 1: 220.95978, VAR 2: -727.24445, VAR 3: -371.36075
+
+2025-07-25 22:49:13.574 +07:00 [INF] Meter: meter2 (ID: 2) Readings:
+Voltage 1: 0V, Voltage 2:0V, Voltage 3: 0V
+Current 1: 0A, Current 2: 0A, Current 3: 0A
+Watt 1: 0W, Watt 2: 0W, Watt 3: 0W
+VA 1: 0, VA 2: 0, VA 3: 0
+VAR 1: 0, VAR 2: 0, VAR 3: 0
+
+2025-07-25 22:49:13.642 +07:00 [INF] Meter: meter1 (ID: 3) Readings:
+Voltage 1: 227.87894V, Voltage 2:231.0922V, Voltage 3: 228.7712V
+Current 1: 1.550389A, Current 2: 3.6577544A, Current 3: 1.9360702A
+Watt 1: 94.69738W, Watt 2: 94.33302W, Watt 3: 141.12073W
+VA 1: 353.301, VA 2: 845.2785, VA 3: 442.91708
+VAR 1: 220.95978, VAR 2: -727.24445, VAR 3: -371.36075
+
+2025-07-25 22:50:13.646 +07:00 [INF] Meter: meter2 (ID: 2) Readings:
+Voltage 1: 0V, Voltage 2:0V, Voltage 3: 0V
+Current 1: 0A, Current 2: 0A, Current 3: 0A
+Watt 1: 0W, Watt 2: 0W, Watt 3: 0W
+VA 1: 0, VA 2: 0, VA 3: 0
+VAR 1: 0, VAR 2: 0, VAR 3: 0
+
+2025-07-25 22:50:13.709 +07:00 [INF] Meter: meter1 (ID: 3) Readings:
+Voltage 1: 227.87894V, Voltage 2:231.0922V, Voltage 3: 228.7712V
+Current 1: 1.550389A, Current 2: 3.6577544A, Current 3: 1.9360702A
+Watt 1: 94.69738W, Watt 2: 94.33302W, Watt 3: 141.12073W
+VA 1: 353.301, VA 2: 845.2785, VA 3: 442.91708
+VAR 1: 220.95978, VAR 2: -727.24445, VAR 3: -371.36075
+
+2025-07-25 22:51:13.715 +07:00 [INF] Meter: meter2 (ID: 2) Readings:
+Voltage 1: 0V, Voltage 2:0V, Voltage 3: 0V
+Current 1: 0A, Current 2: 0A, Current 3: 0A
+Watt 1: 0W, Watt 2: 0W, Watt 3: 0W
+VA 1: 0, VA 2: 0, VA 3: 0
+VAR 1: 0, VAR 2: 0, VAR 3: 0
+
+2025-07-25 22:51:13.779 +07:00 [INF] Meter: meter1 (ID: 3) Readings:
+Voltage 1: 227.87894V, Voltage 2:231.0922V, Voltage 3: 228.7712V
+Current 1: 1.550389A, Current 2: 3.6577544A, Current 3: 1.9360702A
+Watt 1: 94.69738W, Watt 2: 94.33302W, Watt 3: 141.12073W
+VA 1: 353.301, VA 2: 845.2785, VA 3: 442.91708
+VAR 1: 220.95978, VAR 2: -727.24445, VAR 3: -371.36075
+
+2025-07-25 22:52:13.784 +07:00 [INF] Meter: meter2 (ID: 2) Readings:
+Voltage 1: 0V, Voltage 2:0V, Voltage 3: 0V
+Current 1: 0A, Current 2: 0A, Current 3: 0A
+Watt 1: 0W, Watt 2: 0W, Watt 3: 0W
+VA 1: 0, VA 2: 0, VA 3: 0
+VAR 1: 0, VAR 2: 0, VAR 3: 0
+
+2025-07-25 22:52:13.852 +07:00 [INF] Meter: meter1 (ID: 3) Readings:
+Voltage 1: 227.87894V, Voltage 2:231.0922V, Voltage 3: 228.7712V
+Current 1: 1.550389A, Current 2: 3.6577544A, Current 3: 1.9360702A
+Watt 1: 94.69738W, Watt 2: 94.33302W, Watt 3: 141.12073W
+VA 1: 353.301, VA 2: 845.2785, VA 3: 442.91708
+VAR 1: 220.95978, VAR 2: -727.24445, VAR 3: -371.36075
+
+2025-07-25 22:53:13.856 +07:00 [INF] Meter: meter2 (ID: 2) Readings:
+Voltage 1: 0V, Voltage 2:0V, Voltage 3: 0V
+Current 1: 0A, Current 2: 0A, Current 3: 0A
+Watt 1: 0W, Watt 2: 0W, Watt 3: 0W
+VA 1: 0, VA 2: 0, VA 3: 0
+VAR 1: 0, VAR 2: 0, VAR 3: 0
+
+2025-07-25 22:53:13.920 +07:00 [INF] Meter: meter1 (ID: 3) Readings:
+Voltage 1: 227.87894V, Voltage 2:231.0922V, Voltage 3: 228.7712V
+Current 1: 1.550389A, Current 2: 3.6577544A, Current 3: 1.9360702A
+Watt 1: 94.69738W, Watt 2: 94.33302W, Watt 3: 141.12073W
+VA 1: 353.301, VA 2: 845.2785, VA 3: 442.91708
+VAR 1: 220.95978, VAR 2: -727.24445, VAR 3: -371.36075
+
+2025-07-25 22:54:13.925 +07:00 [INF] Meter: meter2 (ID: 2) Readings:
+Voltage 1: 0V, Voltage 2:0V, Voltage 3: 0V
+Current 1: 0A, Current 2: 0A, Current 3: 0A
+Watt 1: 0W, Watt 2: 0W, Watt 3: 0W
+VA 1: 0, VA 2: 0, VA 3: 0
+VAR 1: 0, VAR 2: 0, VAR 3: 0
+
+2025-07-25 22:54:13.989 +07:00 [INF] Meter: meter1 (ID: 3) Readings:
+Voltage 1: 227.87894V, Voltage 2:231.0922V, Voltage 3: 228.7712V
+Current 1: 1.550389A, Current 2: 3.6577544A, Current 3: 1.9360702A
+Watt 1: 94.69738W, Watt 2: 94.33302W, Watt 3: 141.12073W
+VA 1: 353.301, VA 2: 845.2785, VA 3: 442.91708
+VAR 1: 220.95978, VAR 2: -727.24445, VAR 3: -371.36075
+
+2025-07-25 22:55:14.002 +07:00 [INF] Meter: meter2 (ID: 2) Readings:
+Voltage 1: 0V, Voltage 2:0V, Voltage 3: 0V
+Current 1: 0A, Current 2: 0A, Current 3: 0A
+Watt 1: 0W, Watt 2: 0W, Watt 3: 0W
+VA 1: 0, VA 2: 0, VA 3: 0
+VAR 1: 0, VAR 2: 0, VAR 3: 0
+
+2025-07-25 22:55:14.061 +07:00 [INF] Meter: meter1 (ID: 3) Readings:
+Voltage 1: 227.87894V, Voltage 2:231.0922V, Voltage 3: 228.7712V
+Current 1: 1.550389A, Current 2: 3.6577544A, Current 3: 1.9360702A
+Watt 1: 94.69738W, Watt 2: 94.33302W, Watt 3: 141.12073W
+VA 1: 353.301, VA 2: 845.2785, VA 3: 442.91708
+VAR 1: 220.95978, VAR 2: -727.24445, VAR 3: -371.36075
+
+2025-07-25 22:56:15.072 +07:00 [INF] Meter: meter2 (ID: 2) Readings:
+Voltage 1: 227.87894V, Voltage 2:231.0922V, Voltage 3: 228.7712V
+Current 1: 1.550389A, Current 2: 3.6577544A, Current 3: 1.9360702A
+Watt 1: 94.69738W, Watt 2: 94.33302W, Watt 3: 141.12073W
+VA 1: 353.301, VA 2: 845.2785, VA 3: 442.91708
+VAR 1: 220.95978, VAR 2: -727.24445, VAR 3: -371.36075
+
+2025-07-25 22:56:15.072 +07:00 [INF] Meter: meter1 (ID: 3) Readings:
+Voltage 1: 227.87894V, Voltage 2:231.0922V, Voltage 3: 228.7712V
+Current 1: 1.550389A, Current 2: 3.6577544A, Current 3: 1.9360702A
+Watt 1: 94.69738W, Watt 2: 94.33302W, Watt 3: 141.12073W
+VA 1: 353.301, VA 2: 845.2785, VA 3: 442.91708
+VAR 1: 220.95978, VAR 2: -727.24445, VAR 3: -371.36075
+
