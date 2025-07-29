@@ -60,8 +60,6 @@ class Meter
   public void ReadValueFromMeter(int amountValue)
   {
     int[] valueFromModbus = this.modbusSvc.ReadPairInput(this.slaveId, 0, amountValue);
-    // float[] formatedValues = new float[] { };
-    // var forma
     var formatedValues = new List<float>();
 
     for (int i = 0; i < valueFromModbus.Length / 2; i++)

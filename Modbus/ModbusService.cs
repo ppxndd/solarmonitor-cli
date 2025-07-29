@@ -5,6 +5,7 @@ using EasyModbus;
 class ModbusService : IDisposable
 {
   private ModbusClient modbusClient;
+  private CancellationTokenSource cts;
   public ModbusService(string serialPort, int baudrate, string parity, string stopbits, int unitIden)
   {
     this.modbusClient = new ModbusClient(serialPort);
@@ -128,7 +129,42 @@ class ModbusService : IDisposable
     }
 
     Console.WriteLine("Scan finished...");
+  }
 
+  public void StartBackgroundReading(TimeSpan interval, Meter[] meters)
+  {
+    cts = new CancellationTokenSource();
+    Task.Run(() => ReadLoop(interval, cts.Token, meters));
+  }
+
+  public void StopBackgroundReading()
+  {
+    cts?.Cancel();
+  }
+
+  private async Task ReadLoop(TimeSpan interval, CancellationToken token, Meter[] meters)
+  {
+    while (!token.IsCancellationRequested)
+    {
+      try
+      {
+        for (int i = 0; i < meters.Length; i++)
+        {
+          if (meters[i] == null) Console.WriteLine($"Meter at index {i} is null");
+          else
+          {
+            meters[i].ReadValueFromMeter(41);
+          }
+          Console.WriteLine($"{meters[i].Name} start reading...");
+        }
+      }
+      catch (Exception ex)
+      {
+        Console.WriteLine($"Error reading Modbus data: {ex.Message}");
+      }
+
+      await Task.Delay(interval, token);
+    }
   }
 
   public void Dispose()

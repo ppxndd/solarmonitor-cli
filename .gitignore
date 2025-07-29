@@ -1,0 +1,5 @@
+# Ignore all log files
+*.log
+
+# Explicitly ignore meter logs
+meter*.log

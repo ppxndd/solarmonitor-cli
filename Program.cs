@@ -64,6 +64,9 @@ class Program
         case "modbus-slave":
           modbusSvc?.GetAvailableSlave();
           break;
+        case "modbus-run":
+          modbusSvc?.StartBackgroundReading(TimeSpan.FromSeconds(10), meters);
+          break;
         case "config-init":
           configSvc?.InitConfig();
           break;

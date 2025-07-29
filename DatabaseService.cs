@@ -47,7 +47,7 @@ class DatabaseService : IDisposable
     ";
 
     using NpgsqlCommand cmd = new NpgsqlCommand(query, conn);
-    cmd.Parameters.AddWithValue("meter_name", slaveId);
+    cmd.Parameters.AddWithValue("meter_id", slaveId);
     cmd.Parameters.AddWithValue("measurement_time", timestamp);
     cmd.Parameters.AddWithValue("volts_avg", payload[21]);
     cmd.Parameters.AddWithValue("current_sum", payload[24]);
