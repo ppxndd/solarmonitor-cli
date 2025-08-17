@@ -32,7 +32,7 @@ class ConfigService : IDisposable
 
   public ConfigService()
   {
-    this.InitConfig();
+    this.LoadConfig();
   }
 
   public void Dispose()
@@ -40,7 +40,7 @@ class ConfigService : IDisposable
     Console.WriteLine("Exit File...");
   }
 
-  public void InitConfig()
+  public void LoadConfig()
   {
     try
     {

@@ -3,3 +3,9 @@
 
 # Explicitly ignore meter logs
 meter*.log
+
+.env
+
+# Folder
+bin/
+.vscode/

@@ -12,12 +12,18 @@ class Program
   static ConfigService? configSvc;
   static LoggingService? logSvc;
   static Meter[] meters = new Meter[]{};
+  static MeterDatabase? meterRepo;
 
   static void Main()
   {
 
     configSvc = new ConfigService();
     logSvc = new LoggingService();
+    RunConsole();
+  }
+
+  private static void RunConsole()
+  {
     while (true)
     {
       string? rawInput = Console.ReadLine();
@@ -30,19 +36,6 @@ class Program
 
       switch (command)
       {
-        case "help":
-          Console.WriteLine(
-            "\n-- Help Commange --\n" +
-            "-- port-get\n" +
-            "-- modbus-connect\n" +
-            "-- modbus-disconnect\n" +
-            "-- modbus-read-meter [quantity register]\n" +
-            "-- config-init\n" +
-            "-- config-display\n" +
-            "-- log-test\n" +
-            "-- exit\n\n"
-            );
-          break;
         case "port-get":
           GetAvailablePort();
           break;
@@ -58,23 +51,42 @@ class Program
         case "modbus-disconnect":
           modbusSvc?.Dispose();
           break;
-        case "modbus-test":
-          modbusSvc?.TestReadValue();
-          break;
         case "modbus-slave":
           modbusSvc?.GetAvailableSlave();
           break;
-        case "modbus-run":
-          modbusSvc?.StartBackgroundReading(TimeSpan.FromMinutes(1), meters);
+        case "modbus-read":
+          if (arguments.Length < 4) Console.WriteLine("modbus-read <COM Port> <Slave ID> <start address> <quantity>");
+          else
+          {
+            int.TryParse(arguments[1], out int slaveIdInt);
+            int.TryParse(arguments[2], out int startAddress);
+            int.TryParse(arguments[3], out int quantity);
+
+            ModbusService modbusService = new ModbusService(arguments[0], 9600, "none", "one", 1);
+            int[] modbusResponse = modbusService.ReadOneValue((byte)slaveIdInt, startAddress, quantity);
+            Console.WriteLine();
+            for (int i = 0; i < modbusResponse.Length; i++)
+            {
+              Console.WriteLine($"address {i}: {modbusResponse[i]}");
+            }
+            Console.WriteLine();
+            modbusService.Dispose();
+          }
           break;
-        case "config-init":
-          configSvc?.InitConfig();
+        case "modbus-log":
+          var lastTimeExecuted = modbusSvc?.LastTimeExecuted;
+          Console.WriteLine($"Last executed is {lastTimeExecuted}");
+          break;
+        case "config-load":
+          configSvc?.LoadConfig();
           break;
         case "config-display":
           configSvc?.DisplayConfig();
           break;
         case "meter-create":
           if (arguments.Length < 2) Console.WriteLine("meter-create {name meter} {slave id}");
+          else if (meterRepo == null) Console.WriteLine("Please connect database");
+          else if (logSvc == null) Console.WriteLine("...");
           else if (modbusSvc == null) Console.WriteLine("Please connect modbus.");
           else
           {
@@ -84,7 +96,7 @@ class Program
             Console.WriteLine("\nAdding meter...");
             try
             {
-              Meter meter = new Meter(meterName, slaveId, modbusSvc, logSvc, dbSvc);
+              Meter meter = new Meter(meterName, slaveId, modbusSvc, logSvc, meterRepo);
               meter.ReadValueFromMeter(1);
               meters = meters.Concat([meter]).ToArray();
               Console.WriteLine("Add meter success.\n");
@@ -137,24 +149,25 @@ class Program
               meters[i].StartBackgroundReading(TimeSpan.FromMinutes(1));
               Console.WriteLine($"{meters[i].Name} start reading...");
             }
-            Console.WriteLine($"Press Enter to stop...");
-            Console.ReadLine();
-
-            for (int i = 0; i < meters.Length; i++)
-            {
-              meters[i].StopBackgroundReading();
-            }
+          }
+          break;
+        case "meter-stop":
+          for (int i = 0; i < meters.Length; i++)
+          {
+            meters[i].StopBackgroundReading();
+            Console.WriteLine($"Stop reading meter {i}");
           }
           break;
         case "db-connect":
           dbSvc = new DatabaseService(logSvc);
+          meterRepo = new MeterDatabase(dbSvc);
+          Console.WriteLine($"\nConnected Database success.\n");
           break;
         case "exit":
           Console.WriteLine("Goodbye!");
           return;
       }
     }
-
   }
 
   private static void GetAvailablePort()

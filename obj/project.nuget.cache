@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "w0Blt/0I/LA=",
+  "dgSpecHash": "SJllnmdzgFA=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Admin\\Desktop\\testCpp\\testCpp.csproj",
+  "projectFilePath": "C:\\Users\\Admin\\Desktop\\solarmonitor-cli\\testCpp.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Admin\\.nuget\\packages\\dotenv.net\\4.0.0\\dotenv.net.4.0.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\easymodbustcp\\5.6.0\\easymodbustcp.5.6.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.2\\microsoft.extensions.dependencyinjection.abstractions.8.0.2.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.2\\microsoft.extensions.logging.abstractions.8.0.2.nupkg.sha512",

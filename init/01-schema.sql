@@ -1,0 +1,28 @@
+SET TIMEZONE = 'Asia/Bangkok';
+CREATE TABLE IF NOT EXISTS meter_measurements (
+    id SERIAL PRIMARY KEY,
+    meter_id INT NOT NULL,
+    measurement_time TIMESTAMPTZ NOT NULL,
+    volts_avg NUMERIC(10,5),
+    current_sum NUMERIC(10,5),
+    watt_sum NUMERIC(10,5),
+    voltage_1 NUMERIC(10,5),
+    voltage_2 NUMERIC(10,5),
+    voltage_3 NUMERIC(10,5),
+    current_1 NUMERIC(10,7),
+    current_2 NUMERIC(10,7),
+    current_3 NUMERIC(10,7),
+    va_1 NUMERIC(12,5),
+    va_2 NUMERIC(12,5),
+    va_3 NUMERIC(12,5),
+    var_1 NUMERIC(12,5),
+    var_2 NUMERIC(12,5),
+    var_3 NUMERIC(12,5),
+    pf_1 NUMERIC(12,5),
+    pf_2 NUMERIC(12,5),
+    pf_3 NUMERIC(12,5),
+    energy_im NUMERIC(14,5),
+    energy_ex NUMERIC(14,5),
+    freq NUMERIC(10,5),
+    created_at TIMESTAMPTZ DEFAULT NOW()
+)

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Admin\\Desktop\\testCpp\\testCpp.csproj": {}
+    "C:\\Users\\Admin\\Desktop\\solarmonitor-cli\\testCpp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Admin\\Desktop\\testCpp\\testCpp.csproj": {
+    "C:\\Users\\Admin\\Desktop\\solarmonitor-cli\\testCpp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\testCpp\\testCpp.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\solarmonitor-cli\\testCpp.csproj",
         "projectName": "testCpp",
-        "projectPath": "C:\\Users\\Admin\\Desktop\\testCpp\\testCpp.csproj",
+        "projectPath": "C:\\Users\\Admin\\Desktop\\solarmonitor-cli\\testCpp.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\Desktop\\testCpp\\obj\\",
+        "outputPath": "C:\\Users\\Admin\\Desktop\\solarmonitor-cli\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -78,6 +78,10 @@
             "System.IO.Ports": {
               "target": "Package",
               "version": "[9.0.7, )"
+            },
+            "dotenv.net": {
+              "target": "Package",
+              "version": "[4.0.0, )"
             }
           },
           "imports": [

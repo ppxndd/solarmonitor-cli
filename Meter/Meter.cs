@@ -3,14 +3,14 @@ using System.IO.Ports;
 using EasyModbus;
 using Serilog;
 
-class Meter
+class Meter: IDevice
 {
   private string name;
   private byte slaveId;
   private ModbusService modbusSvc;
   private LoggingService logSvc;
   private CancellationTokenSource cts;
-  private DatabaseService dbSvc;
+  private readonly IMeterRepository _repo;
   public string Name
   {
     get { return name; }
@@ -19,14 +19,18 @@ class Meter
   {
     get { return slaveId; }
   }
+  public CancellationTokenSource Cts
+  {
+    get { return cts; }
+  }
 
-  public Meter(string name, byte slaveId, ModbusService modbusService, LoggingService logSvc, DatabaseService dbSvc)
+  public Meter(string name, byte slaveId, ModbusService modbusService, LoggingService logSvc, IMeterRepository repo)
   {
     this.name = name;
     this.slaveId = slaveId;
     this.modbusSvc = modbusService;
     this.logSvc = logSvc;
-    this.dbSvc = dbSvc;
+    _repo = repo;
   }
 
   public void StartBackgroundReading(TimeSpan interval)
@@ -51,7 +55,7 @@ class Meter
       }
       catch (Exception ex)
       {
-        Console.WriteLine($"Error reading Modbus data: {ex.Message}");
+        Console.WriteLine($"Error reading Modbus {slaveId} data: {ex.Message}");
       }
 
       await Task.Delay(interval, token);
@@ -69,8 +73,7 @@ class Meter
     }
     if (formatedValues.ToArray().Length > 1)
     {
-      this.dbSvc.CreateOneDataMeter(this.slaveId, formatedValues.ToArray(), this.name, this.slaveId);
-      this.logSvc.LogMeterReading(formatedValues.ToArray(), this.name, this.slaveId);
+      SaveAndLog(formatedValues.ToArray());
     }
   }
 
@@ -87,5 +90,12 @@ class Meter
 
     float returnValue = BitConverter.ToSingle(formattedValue, 0);
     return returnValue;
+  }
+
+  private void SaveAndLog(float[] payload)
+  {
+    var currentTime = DateTime.Now;
+    _repo.CreateOneDataMeter(payload, this.slaveId, currentTime);
+    logSvc.LogMeterReading(payload, this.name, this.slaveId);
   }
 }
