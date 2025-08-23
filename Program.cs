@@ -105,6 +105,9 @@ class Program
             modbusService.Dispose();
           }
           break;
+        case "modbus-run":
+          modbusSvc?.StartBackgroundReading(TimeSpan.FromMinutes(1), meters);
+          break;
         case "modbus-log":
           var lastTimeExecuted = modbusSvc?.LastTimeExecuted;
           Console.WriteLine($"Last executed is {lastTimeExecuted}");
