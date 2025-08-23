@@ -25,4 +25,11 @@ CREATE TABLE IF NOT EXISTS meter_measurements (
     energy_ex NUMERIC(14,5),
     freq NUMERIC(10,5),
     created_at TIMESTAMPTZ DEFAULT NOW()
-)
+);
+
+CREATE TABLE IF NOT EXISTS environment_data (
+    created_at TIMESTAMPTZ DEFAULT NOW() PRIMARY KEY,
+    temperature NUMERIC(5, 2),
+    humidity NUMERIC(5, 2),
+    pyranometer NUMERIC(5, 2)
+);

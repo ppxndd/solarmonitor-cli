@@ -38,7 +38,7 @@ class DatabaseService
   {
     var conn = new NpgsqlConnection(_connectionString);
     conn.Open();
-    _logSvc.LogDatabase("Connected", "Successfully");
+    _logSvc.LogDatabase("Opened Connection", "Successfully");
     return conn;
   }
 

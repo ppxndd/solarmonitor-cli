@@ -8,6 +8,11 @@ class ModbusService : IDisposable
   private CancellationTokenSource cts;
 
   private DateTime lastTimeExecuted;
+  private string serialPort;
+  public string SerialPort
+  {
+    get { return serialPort; }
+  }
   public DateTime LastTimeExecuted
   {
     get { return lastTimeExecuted; }
@@ -19,6 +24,7 @@ class ModbusService : IDisposable
 
     this.modbusClient.Baudrate = baudrate;
     this.modbusClient.Parity = this.SetParity(parity);
+    this.serialPort = serialPort;
 
     this.modbusClient.StopBits = this.SetStopbits(stopbits);
     this.modbusClient.UnitIdentifier = (byte)unitIden;
@@ -109,6 +115,11 @@ class ModbusService : IDisposable
     return rawValues;
   }
 
+  public int[] ReadOneValue(int startAddress, int quantity)
+  {
+    lastTimeExecuted = DateTime.Now;
+    return this.modbusClient.ReadInputRegisters(startAddress, quantity);
+   }
   public int[] ReadOneValue(byte slaveId, int startAddress, int quantity)
   {
     this.modbusClient.UnitIdentifier = slaveId;

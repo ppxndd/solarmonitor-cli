@@ -12,7 +12,10 @@ class Program
   static ConfigService? configSvc;
   static LoggingService? logSvc;
   static Meter[] meters = new Meter[]{};
+  static Sensor _sensor;
+  static ModbusService[] modbusList = new ModbusService[] { };
   static MeterDatabase? meterRepo;
+  static SensorDatabase? _sensorRepo;
 
   static void Main()
   {
@@ -48,8 +51,37 @@ class Program
           int unitIden = configSvc.UnitIden;
           modbusSvc = new ModbusService(serialPort, baudrate, parity, stopbits, unitIden);
           break;
+        case "modbus-create":
+          if (arguments.Length < 3) Console.WriteLine("modbus-create <Name> <Serial Port> <Slave Id>");
+          else
+          {
+            string comPort = arguments[1];
+            int.TryParse(arguments[2], out int slaveId);
+            try
+            {
+              ModbusService mb = new ModbusService(comPort, 9600, "none", "one", (byte)slaveId);
+              modbusList = modbusList.Concat([mb]).ToArray();
+            }
+            catch (Exception error)
+            {
+              Console.WriteLine("Something error. Please try again.");
+            }
+          }
+          break;
         case "modbus-disconnect":
           modbusSvc?.Dispose();
+          break;
+        case "modbus-list":
+          if (modbusList.Length < 1) Console.WriteLine("No modbus in this system.");
+          else
+          {
+            Console.WriteLine("\nID\tSerial Port");
+            for (int i = 0; i < modbusList.Length; i++)
+            {
+              Console.WriteLine($"{i}\t{modbusList[i].SerialPort}");
+            }
+            Console.WriteLine();
+          }
           break;
         case "modbus-slave":
           modbusSvc?.GetAvailableSlave();
@@ -158,9 +190,37 @@ class Program
             Console.WriteLine($"Stop reading meter {i}");
           }
           break;
+        case "sensor-create":
+          if (arguments.Length < 2) Console.WriteLine("sensor-create <index of modbus HT sensor> <index of modbus pyranometer sensor>");
+          else if (modbusList.Length < 2) Console.WriteLine("Please create modbus before use this command.");
+          else if (_sensorRepo == null) Console.WriteLine("Please connect database.");
+          else if (logSvc == null) Console.WriteLine("Please create logging service");
+          else
+          {
+            int.TryParse(arguments[0], out int indexModbusHT);
+            int.TryParse(arguments[1], out int indexModbusPyranometer);
+            LoggingService sensorLog = new LoggingService(type: "sensor");
+            _sensor = new Sensor(modbusList[indexModbusHT], modbusList[indexModbusPyranometer], _sensorRepo, sensorLog);
+          }
+          break;
+        case "sensor-run":
+          if (_sensor == null) Console.WriteLine("Please create sensor before run");
+          else
+          {
+            _sensor.StartBackgroundReading(TimeSpan.FromMinutes(1));
+            Console.WriteLine("Sensor start reading...\n");
+          }
+          break;
+        case "sensor-stop":
+          _sensor.StopBackgroundReading();
+          Console.WriteLine("Stop reading sensor.\n");
+          break;
+        case "sensor-list":
+          break;
         case "db-connect":
           dbSvc = new DatabaseService(logSvc);
           meterRepo = new MeterDatabase(dbSvc);
+          _sensorRepo = new SensorDatabase(dbSvc);
           Console.WriteLine($"\nConnected Database success.\n");
           break;
         case "exit":
