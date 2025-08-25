@@ -11,11 +11,13 @@ class Program
   static ModbusService? modbusSvc;
   static ConfigService? configSvc;
   static LoggingService? logSvc;
-  static Meter[] meters = new Meter[]{};
+  static Meter[] meters = new Meter[] { };
   static Sensor _sensor;
   static ModbusService[] modbusList = new ModbusService[] { };
   static MeterDatabase? meterRepo;
   static SensorDatabase? _sensorRepo;
+
+  static StatusDatabase? _statusRepo;
 
   static void Main()
   {
@@ -44,22 +46,27 @@ class Program
           break;
         case "modbus-connect":
           if (configSvc == null) return;
-          string serialPort = configSvc.SerialPort;
-          int baudrate = configSvc.Baudrate;
-          string parity = configSvc.Parity;
-          string stopbits = configSvc.StopBits;
-          int unitIden = configSvc.UnitIden;
-          modbusSvc = new ModbusService(serialPort, baudrate, parity, stopbits, unitIden);
+          else if (_statusRepo == null) Console.WriteLine("Please connect database before.");
+          else
+          {
+            string serialPort = configSvc.SerialPort;
+            int baudrate = configSvc.Baudrate;
+            string parity = configSvc.Parity;
+            string stopbits = configSvc.StopBits;
+            int unitIden = configSvc.UnitIden;
+            modbusSvc = new ModbusService(serialPort, baudrate, parity, stopbits, unitIden, _statusRepo);
+          }
           break;
         case "modbus-create":
           if (arguments.Length < 3) Console.WriteLine("modbus-create <Name> <Serial Port> <Slave Id>");
+          else if (_statusRepo == null) Console.WriteLine("Please connect database before.");
           else
           {
             string comPort = arguments[1];
             int.TryParse(arguments[2], out int slaveId);
             try
             {
-              ModbusService mb = new ModbusService(comPort, 9600, "none", "one", (byte)slaveId);
+              ModbusService mb = new ModbusService(comPort, 9600, "none", "one", (byte)slaveId, _statusRepo);
               modbusList = modbusList.Concat([mb]).ToArray();
             }
             catch (Exception error)
@@ -88,13 +95,14 @@ class Program
           break;
         case "modbus-read":
           if (arguments.Length < 4) Console.WriteLine("modbus-read <COM Port> <Slave ID> <start address> <quantity>");
+          else if (_statusRepo == null) Console.WriteLine("Please connect database before.");
           else
           {
             int.TryParse(arguments[1], out int slaveIdInt);
             int.TryParse(arguments[2], out int startAddress);
             int.TryParse(arguments[3], out int quantity);
 
-            ModbusService modbusService = new ModbusService(arguments[0], 9600, "none", "one", 1);
+            ModbusService modbusService = new ModbusService(arguments[0], 9600, "none", "one", 1, _statusRepo);
             int[] modbusResponse = modbusService.ReadOneValue((byte)slaveIdInt, startAddress, quantity);
             Console.WriteLine();
             for (int i = 0; i < modbusResponse.Length; i++)
@@ -161,7 +169,7 @@ class Program
           else
           {
             Console.WriteLine("\n-----* Meters detail *-----");
-            for (int i=0; i<meters.Length; i++) 
+            for (int i = 0; i < meters.Length; i++)
             {
               try
               {
@@ -223,6 +231,7 @@ class Program
         case "db-connect":
           dbSvc = new DatabaseService(logSvc);
           meterRepo = new MeterDatabase(dbSvc);
+          _statusRepo = new StatusDatabase(dbSvc);
           _sensorRepo = new SensorDatabase(dbSvc);
           Console.WriteLine($"\nConnected Database success.\n");
           break;
@@ -241,5 +250,4 @@ class Program
       Console.WriteLine("Serial port: " + port);
     }
   }
-
 }

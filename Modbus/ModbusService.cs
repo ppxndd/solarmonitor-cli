@@ -9,6 +9,7 @@ class ModbusService : IDisposable
 
   private DateTime lastTimeExecuted;
   private string serialPort;
+  private StatusDatabase _statusRepo;
   public string SerialPort
   {
     get { return serialPort; }
@@ -18,7 +19,7 @@ class ModbusService : IDisposable
     get { return lastTimeExecuted; }
   }
 
-  public ModbusService(string serialPort, int baudrate, string parity, string stopbits, int unitIden)
+  public ModbusService(string serialPort, int baudrate, string parity, string stopbits, int unitIden, StatusDatabase statusRepo)
   {
     this.modbusClient = new ModbusClient(serialPort);
 
@@ -28,6 +29,8 @@ class ModbusService : IDisposable
 
     this.modbusClient.StopBits = this.SetStopbits(stopbits);
     this.modbusClient.UnitIdentifier = (byte)unitIden;
+    _statusRepo = statusRepo;
+
     try
     {
       this.modbusClient.Connect();
@@ -160,7 +163,7 @@ class ModbusService : IDisposable
   public void StartBackgroundReading(TimeSpan interval, Meter[] meters)
   {
     cts = new CancellationTokenSource();
-    Task.Run(() => ReadLoop(interval, cts.Token, meters));
+    Task.Run(() => ReadLoop(interval, meters, cts.Token));
   }
 
   public void StopBackgroundReading()
@@ -168,10 +171,11 @@ class ModbusService : IDisposable
     cts?.Cancel();
   }
 
-  private async Task ReadLoop(TimeSpan interval, CancellationToken token, Meter[] meters)
+  private async Task ReadLoop(TimeSpan interval, Meter[] meters, CancellationToken token)
   {
     while (!token.IsCancellationRequested)
     {
+      int activeMeter = 0;
       try
       {
         for (int i = 0; i < meters.Length; i++)
@@ -180,9 +184,11 @@ class ModbusService : IDisposable
           else
           {
             meters[i].ReadValueFromMeter(41);
+            activeMeter++;
           }
-          Console.WriteLine($"{meters[i].Name} start reading...");
         }
+        int totalCountDb = _statusRepo.GetTotalCountRow();
+        DisplayStatusRunning(activeMeter, lastTimeExecuted, totalCountDb);
       }
       catch (Exception ex)
       {
@@ -191,6 +197,17 @@ class ModbusService : IDisposable
 
       await Task.Delay(interval, token);
     }
+  }
+
+  private void DisplayStatusRunning(int activeMeter, DateTime lastTimeExecuted, int totalCountDb)
+  {
+    Console.WriteLine(
+      "\n\n------* Running *-------\n" +
+      $"Active Meter : {activeMeter}\n" +
+      $"Last executed : {lastTimeExecuted}\n" +
+      $"Total Count of data : {totalCountDb}\n" +
+      "------------------------\n\n"
+      );
   }
 
   public void Dispose()

@@ -3,7 +3,7 @@ using System.IO.Ports;
 using EasyModbus;
 using Serilog;
 
-class Meter: IDevice
+class Meter : IDevice
 {
   private string name;
   private byte slaveId;
@@ -55,6 +55,7 @@ class Meter: IDevice
       }
       catch (Exception ex)
       {
+        logSvc.LogError("Meter Readloop error", ex);
         Console.WriteLine($"Error reading Modbus {slaveId} data: {ex.Message}");
       }
 

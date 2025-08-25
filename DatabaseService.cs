@@ -38,16 +38,31 @@ class DatabaseService
   {
     var conn = new NpgsqlConnection(_connectionString);
     conn.Open();
-    _logSvc.LogDatabase("Opened Connection", "Successfully");
+    // _logSvc.LogDatabase("Opened Connection", "Successfully");
     return conn;
   }
 
-  public void ExecuteNonQuery(string query, Action<NpgsqlCommand> parameterSetter)
+  public void ExecuteNonQuery(string query, Action<NpgsqlCommand>? parameterSetter = null)
   {
     using var conn = GetConnection();
-
     using var cmd = new NpgsqlCommand(query, conn);
-    parameterSetter(cmd);
+
+    parameterSetter?.Invoke(cmd);
+
     cmd.ExecuteNonQuery();
+  }
+
+  public T ExecuteScalar<T>(string query, Action<NpgsqlCommand>? parameterSetter = null)
+  {
+    using var conn = GetConnection();
+    using var cmd = new NpgsqlCommand(query, conn);
+
+    parameterSetter?.Invoke(cmd);
+
+    object? result = cmd.ExecuteScalar();
+
+    if (result == null || result is DBNull) return default!;
+
+    return (T)Convert.ChangeType(result, typeof(T));
   }
 }
